@@ -1,0 +1,64 @@
+﻿Location,Transect,Fire_freq,Fire_freq_category,Collection_datae,Species,Seed_lot,Seed_colour,Number_treatments_possible,Number_seeds_post_thermogradient,Number_seeds,Seed_mass_10_seeds_(g),See_lot_mass_(g),Number_cones,Seed_mass/cone,Cone_length,Cone_width
+Gatton National Park,GB1,4,High,11/04/2022,littoralis,GB1Q30,Black,0,,14,0.0277,0.0400,1,0.04,3.70,2.10
+Gatton National Park,GB1,4,High,11/04/2022,littoralis,WPS1,Dark brown,0,,48,0.0239,0.1150,4,0.02875,1.93,1.66
+Gatton National Park,GB1,4,High,11/04/2022,littoralis,WPS2,Black,0,,16,0.0208,0.0340,4,0.0085,1.93,1.60
+Gatton National Park,GB1,4,High,11/04/2022,littoralis,WPS3,Black,1.429359823,,86,0.0302,0.2590,9,0.028777778,2.20,1.54
+Mount Barney National Park,BTH2,4,High,10/07/2023,littoralis,WPS127,Dark brown,9.569559229,,574,0.0242,1.3895,24,0.057895833,1.59,1.78
+Mount Barney National Park,BTH2,4,High,10/07/2023,littoralis,WPS128,Black,11.27849003,,677,0.0234,1.5835,16,0.09896875,2.08,1.56
+Hidden Vale,HVL2,0,Low,26/05/2023,littoralis,WPS87,Dark brown,3.773076923,,226,0.0260,0.5886,4,0.14715,2.69,1.89
+Hidden Vale,HVL2,0,Low,26/05/2023,littoralis,WPS88,Medium brown,8.257575758,,495,0.0286,1.4170,10,0.1417,1.89,1.50
+Hidden Vale,HVL2,0,Low,26/05/2023,littoralis,WPS89,Medium brown,27.7977208,1668,1868,0.0234,4.3708,41,0.106604878,2.08,1.45
+Hidden Vale,HVL2,0,Low,26/05/2023,littoralis,WPS90,Dark brown,4.871895425,,292,0.0255,0.7454,5,0.14908,2.05,1.49
+Hidden Vale,HVL2,0,Low,26/05/2023,littoralis,WPS91,Black,7.307795699,,438,0.0248,1.0874,7,0.155342857,2.14,1.60
+Hidden Vale,HVL1,0,Low,29/05/2023,littoralis,WPS92,Dark brown,15.63848039,,938,0.0136,1.2761,21,0.060766667,1.61,1.41
+Hidden Vale,HVL1,0,Low,29/05/2023,littoralis,WPS93,Dark brown,4.12724758,,248,0.0241,0.5968,5,0.11936,2.27,1.57
+Hidden Vale,HVL1,0,Low,29/05/2023,littoralis,WPS94,Black,10.31826742,,619,0.0177,1.0958,11,0.099618182,2.43,1.58
+Hidden Vale,HVL1,0,Low,29/05/2023,littoralis,WPS95,Black,4.23048048,,254,0.0222,0.5635,7,0.0805,1.48,1.45
+Hidden Vale,HVL1,0,Low,29/05/2023,littoralis,WPS96,Dark brown,13.10169492,,786,0.0177,1.3914,11,0.126490909,2.28,1.40
+Dwyers Scrub Conservation Park,DLitL1,0,Low,20/06/2023,littoralis,WPS107,Medium brown,16.04738562,963,1163,0.0204,2.3722,13,0.182476923,2.98,2.08
+Dwyers Scrub Conservation Park,DLitL1,0,Low,20/06/2023,littoralis,WPS108,Dark brown,6.090177134,,365,0.0207,0.7564,6,0.126066667,1.88,1.68
+Dwyers Scrub Conservation Park,DLitL1,0,Low,20/06/2023,littoralis,WPS109,Medium brown,3.77124183,,226,0.0204,0.4616,4,0.1154,2.28,1.66
+Dwyers Scrub Conservation Park,DLitL1,0,Low,20/06/2023,littoralis,WPS110,Dark brown,12.94029851,,776,0.0201,1.5606,8,0.195075,2.55,1.58
+Dwyers Scrub Conservation Park,DLitL1,0,Low,20/06/2023,littoralis,WPS111,Dark brown,2.512372635,,151,0.0229,0.3452,5,0.06904,2.75,1.59
+Mount Barney National Park,BTH2,3,Low,10/07/2023,littoralis,WPS129,Medium brown,13.45173745,,807,0.0259,2.0904,17,0.122964706,2.42,1.63
+Mount Barney National Park,BTLit1,0,Low,11/07/2023,littoralis,WPS135,Medium brown,9.495590829,,570,0.0189,1.0768,11,0.097890909,1.99,1.60
+Mount Barney National Park,BTLit1,0,Low,11/07/2023,littoralis,WPS136,Dark brown,15.60424967,,936,0.0251,2.3500,17,0.138235294,2.44,1.62
+Mount Barney National Park,BTLit1,0,Low,11/07/2023,littoralis,WPS137,Medium brown,14.00163399,,840,0.0204,1.7138,11,0.1558,2.81,2.11
+Mount Barney National Park,BTLit1,0,Low,11/07/2023,littoralis,WPS139,Medium brown,17.69111969,,1061,0.0259,2.7492,23,0.119530435,1.73,1.59
+Mount Barney National Park,BTLit1,0,Low,11/07/2023,littoralis,WPS140,Dark brown,9.772609819,,586,0.0258,1.5128,12,0.126066667,1.87,1.61
+Mount Barney National Park,BTLit2,0,Low,11/07/2023,littoralis,WPS141,Dark brown,15.50173611,,930,0.0192,1.7858,22,0.081172727,1.73,1.46
+Mount Barney National Park,BTLit2,0,Low,11/07/2023,littoralis,WPS142,Dark brown,13.03454231,,782,0.0193,1.5094,14,0.107814286,2.10,1.38
+Mount Barney National Park,BTLit2,0,Low,11/07/2023,littoralis,WPS143,Dark brown,12.71577381,,763,0.0224,1.7090,20,0.08545,1.75,1.48
+Mount Barney National Park,BTLit2,0,Low,11/07/2023,littoralis,WPS144,Dark brown,12.39182692,,744,0.0208,1.5465,11,0.140590909,2.50,1.69
+Mount Barney National Park,BTLit2,0,Low,11/07/2023,littoralis,WPS145,Dark brown,16.67391304,,1000,0.0230,2.3010,22,0.104590909,1.96,1.57
+Mount Barney National Park,BTHLit1,3,Low,12/07/2023,littoralis,WPS151,Dark brown,1.760984848,,106,0.2200,2.3245,21,0.110690476,1.88,1.50
+Mount Barney National Park,BTHLit1,3,Low,12/07/2023,littoralis,WPS152,Dark brown,9.155660377,,549,0.0212,1.1646,12,0.09705,2.08,1.58
+Mount Barney National Park,BTHLit1,3,Low,12/07/2023,littoralis,WPS153,Black,6.259009009,,376,0.0222,0.8337,8,0.1042125,2.19,1.55
+Mount Barney National Park,BTHLit1,3,Low,12/07/2023,littoralis,WPS154,Dark brown,16.91205674,1015,1215,0.0235,2.8546,24,0.118941667,1.98,1.55
+Mount Barney National Park,BTHLit1,3,Low,12/07/2023,littoralis,WPS156,Black,3.714067278,,223,0.0218,0.4858,11,0.044163636,1.36,1.26
+Mount Barney National Park,BTHLit1,3,Low,12/07/2023,littoralis,WPS157,Medium brown,4.60960961,,277,0.0222,0.6140,13,0.047230769,1.32,1.31
+Mount Barney Lodge,BTLit3,0,Low,13/07/2023,littoralis,WPS169,Dark brown,15.6961178,,942,0.0249,2.3450,14,0.1675,2.15,1.68
+Mount Barney Lodge,BTLit3,0,Low,13/07/2023,littoralis,WPS171,Dark brown,6.483193277,,389,0.0238,0.9258,8,0.115725,1.74,1.51
+,,,,,,,,,,,,,507,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
