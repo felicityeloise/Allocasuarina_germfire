@@ -5,7 +5,7 @@
 # Thermogradient bar simple analysis of results
 # https://academic.oup.com/aob/article/129/7/787/6536948 - package for analysing germination results
 
-dat <- read.table("./Seeds_results.txt", header = T)
+dat <- read.table("./00_Data/Thermogradient_test/Cumulative_thermogradient_results.txt", header = T)
 head(dat); dim(dat)
 
 dat$Time_spread <- dat$Time_to_finish - dat$Time_to_germ
@@ -91,68 +91,9 @@ dat2 <- cbind(dat[,c(1:4, 18:21)], cum.prop)
 head(dat2)
 head(cum.prop2_tor)
 
-write.table(dat2, "./Cumulative_thermogradient_results.txt", col.names = T, row.names = F, sep = ",")
+write.table(dat2, "./00_Data/Thermogradient_test/Cumulative_thermogradient_results.txt", col.names = T, row.names = F, sep = ",")
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-chamb_dat <- read.csv("./thermogradient_results_by_chamber_long.csv", header = T)
-
-
-
-# For time to 50% germination we need to separate the data into the chambers and species
-Chamber1_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 1" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber2_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 2" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber3_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 3" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber4_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 4" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber5_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 5" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber6_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 6" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber7_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 7" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber8_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 8" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber9_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 9" & chamb_dat$Species == "Allocasuarina torulosa")
-Chamber10_tor <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 10" & chamb_dat$Species == "Allocasuarina torulosa")
-
-
-
-x <- Chamber10_tor$Number_germinated
-int <- 1:length(x)
-tot <- 60
-
-
-WeightGermPercent(germ.counts = x, total.seeds = tot, intervals = int, partial = T)
-t50(germ.counts = x, intervals = int, partial = T, method = c("coolbear", "farooq"))
-
-
-
-Chamber1_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 1" & chamb_dat$Species == "Allocasuarina litttoralis")
-Chamber2_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 2" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber3_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 3" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber4_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 4" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber5_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 5" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber6_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 6" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber7_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 7" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber8_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 8" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber9_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 9" & chamb_dat$Species == "Allocasuarina littoralis")
-Chamber10_lit <- subset(chamb_dat, chamb_dat$Chamber == "Chamber 10" & chamb_dat$Species == "Allocasuarina littoralis")
-
-x <- Chamber4_lit$Number_germinated
-int <- 1:length(x)
-tot <- 60
-
-
-WeightGermPercent(germ.counts = x, total.seeds = tot, intervals = int, partial = T)
-
-t50(germ.counts = x, intervals = int, partial = T, method = c("coolbear", "farooq"))
 

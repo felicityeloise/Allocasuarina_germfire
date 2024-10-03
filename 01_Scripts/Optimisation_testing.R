@@ -6,7 +6,7 @@
 library(germinationmetrics)
 
 # 1. Heat shock temperature optimisation
-heat <- read.table('./heat_tests.txt', header = T)
+heat <- read.table('./00_Data/Optimisation_tests/heat_tests.txt', header = T)
 head(heat); dim(heat)
 
 
@@ -140,7 +140,7 @@ par(xpd = F)
 
 
 # Look at some summary stats ----
-heat_long <- read.table('./heat_long.txt', header = T)
+heat_long <- read.table('./00_Data/Optimisation_tests/heat_long.txt', header = T)
 head(heat_long);dim(heat_long)
 
 # Split the data for analysing
@@ -1136,7 +1136,7 @@ WeightGermPercent(germ.counts = WPS154_110_10$Count, total.seeds = 20, intervals
 
 
 # 2. Smoke treatments -----
-smoke <- read.table('./smoke_tests.txt', header = T)
+smoke <- read.table('./00_Data/Optimisation_tests/smoke_tests.txt', header = T)
 head(smoke); dim(smoke)
 
 smoke$Time_spread <- smoke$Time_to_finish - smoke$Time_to_germ
@@ -1278,7 +1278,7 @@ par(xpd = F)
 
 # Take a look at some summary statistics
 library(germinationmetrics)
-smoke_long <- read.table('./smoke_long.txt', header = T)
+smoke_long <- read.table('./00_Data/Optimisation_tests/smoke_long.txt', header = T)
 head(smoke_long)
 
 # To be able to work with the data we need to subset by seed lot, smoke type and duration

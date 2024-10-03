@@ -2,7 +2,7 @@
 # 10/09/2024
 
 
-viable <- read.table('./Viability.txt', header = T, stringsAsFactors = T)
+viable <- read.table('./00_Data/Full_experiment/Viability.txt', header = T, stringsAsFactors = T)
 head(viable)
 
 # Want to produce a viability plot showing correlation between x_ray and TTC in each replicate separated by species 
@@ -217,7 +217,6 @@ Treatment_viability$x_ray <- round(Treatment_viability$x_ray, digits = 3)
 Treatment_viability$correlation <- round(Treatment_viability$correlation, digits = 3)
 Treatment_viability$pvalue <- round(Treatment_viability$pvalue, digits = 3)
 
-write.csv(Treatment_viability, "./Outputs/Treatment_viability_correlations.csv", row.names = F)
 
 
 options(scipen = 0)
@@ -293,24 +292,4 @@ title(expression(bold('(c) ')~bolditalic(Allocasuarina~torulosa)~bold(' high fir
 par(xpd = NA)
 legend(x = 1.2, y = 1, legend = c("Control", "80°C", "95°C", "Smoke", "80°C+Smoke", "95°C+Smoke"), col = pal, title = expression(bold("Treatment")), pch = 19, cex = 1.2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-plot(viable$X.ray_proportion_viable, viable$TTC_proportion_viable, xlim = c(0,1), xlab = "X-ray", ylab = "Tetrazolium", las = 1)
-text(0, 0.85, labels = "Pearson r = 0.64", adj = 0)
-text(0, 0.75, labels = "p < 0.001", adj = 0)
-
-
-cor.test(viable$X.ray_proportion_viable, viable$TTC_proportion_viable)
 

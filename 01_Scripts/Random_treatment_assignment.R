@@ -7,12 +7,12 @@
 
 
 # Read in the data
-torulosa <- read.csv("./Treatment_grouping/Torulosa.csv", header = T)
+torulosa <- read.csv("./00_Data/Full_experiment/Treatment_grouping/Torulosa.csv", header = T)
 head(torulosa)
 str(torulosa)
 unique(torulosa$Fire_freq_category)
 
-littoralis <- read.csv("./Treatment_grouping/Littoralis.csv", header = T)
+littoralis <- read.csv("./00_Data/Full_experiment/Treatment_grouping/Littoralis.csv", header = T)
 head(littoralis)
 
 torulosa_lowfi <- subset(torulosa, Fire_freq_category == "low")
@@ -57,9 +57,9 @@ da <- d %>%
   mutate(is_equal = if_all(Group2:Group6, `==`, Group1))
 
 # This method worked to ensure none of the rows have the same group in any of the columns - our job is then to manually look at this data, make sure we have enough samples across the treatments. 
-write.csv(da, "./Treatment_grouping/torulosa_lowfi_orig.csv")
+write.csv(da, "./03_Results/Treatment_grouping/torulosa_lowfi.csv")
 
-da <- read.csv("./Treatment_grouping/torulosa_lowfi_orig.csv")
+da <- read.csv("./03_Results/Treatment_grouping/torulosa_lowfi.csv")
 dim(da)
 
 # See how many individuals have been allocated to each treatment
@@ -191,9 +191,9 @@ T1;T2;T3;T4;T5;T6
 
 
 # Write the final output
-write.csv(da, './Treatment_grouping/torulosa_lowfi_treatments_final.csv')
+write.csv(da, './03_Results/Treatment_grouping/Treatment_grouping/torulosa_lowfi_treatments_final.csv')
 
-torlow_final <- read.csv('./Treatment_grouping/torulosa_lowfi_treatments_final.csv', header = T)
+torlow_final <- read.csv('./03_Results/Treatment_grouping/torulosa_lowfi_treatments_final.csv', header = T)
 
 
 Control <- torlow_final[torlow_final$Group1 == 1 | torlow_final$Group2 == 1 | torlow_final$Group3 == 1,]
@@ -230,12 +230,12 @@ d1
 da1 <- d1 %>% 
   mutate(is_equal = if_all(Group2:Group6, `==`, Group1))
 
-write.csv(da1, "./Treatment_grouping/torulosa_highfi_orig.csv")
+write.csv(da1, "./03_Results/Treatment_grouping/torulosa_highfi.csv")
 
 
 
 # Filter out those treatments that exceed the number allowed for each individual
-df <- read.csv("./Treatment_grouping/torulosa_highfi_orig.csv")
+df <- read.csv("./03_Results/Treatment_grouping/torulosa_highfi.csv")
 
 
 # See how many individuals have been allocated to each treatment
@@ -339,11 +339,11 @@ T6 <- Group1[7,2]+Group2[7,2]+Group3[6,2]+Group4[5,2]+Group5[5,2]
 T1;T2;T3;T4;T5;T6
 
 
-write.csv(df, './Treatment_grouping/torulossa_highfi_final_treatments.csv')
+write.csv(df, './03_Results/Treatment_grouping/Treatment_grouping/torulosa_highfi_final_treatments.csv')
 
 
 
-torhi_final <- read.csv('./Treatment_grouping/torulossa_highfi_final_treatments.csv', header = T)
+torhi_final <- read.csv('./03_Results/Treatment_grouping/torulosa_highfi_final_treatments.csv', header = T)
 
 Control <- torhi_final[torhi_final$Group1 == 1 | torhi_final$Group2 == 1  | torhi_final$Group3 == 1, ]
 dim(Control)
@@ -381,12 +381,12 @@ d3
 d3a <- d3 %>% 
   mutate(is_equal = if_all(Group2:Group6, `==`, Group1))
 
-write.csv(d3a, "./Treatment_grouping/littoralis_treat_groups_orig.csv")
+write.csv(d3a, "./03_Results/Treatment_grouping/littoralis.csv")
 
 
 
 # Filter out those treatments that exceed the number allowed for each individual
-d3 <- read.csv("./Treatment_grouping/littoralis_treat_groups_orig.csv")
+d3 <- read.csv("./03_Results/Treatment_grouping/littoralis.csv")
 
 # See how many individuals have been allocated to each treatment
 Group1 <- d3 %>% count(Group1, sort = F, name = "Treatment frequency")
@@ -508,9 +508,9 @@ T1;T2;T3;T4;T5;T6
 View(d3.1)
 # These are the final treatment allocations for Allocasuarina littoralis individuals
 
-write.csv(d3.1, './Treatment_grouping/littoralis_treatments_final.csv')
+write.csv(d3.1, './03_Results/Treatment_grouping/littoralis_treatments_final.csv')
 
-lit_final <- read.csv('./Treatment_grouping/littoralis_treatments_final.csv', header = T)
+lit_final <- read.csv('./03_Results/Treatment_grouping/littoralis_treatments_final.csv', header = T)
 head(lit_final)
 
 
