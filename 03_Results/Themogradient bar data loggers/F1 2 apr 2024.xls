@@ -1,0 +1,3067 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>uqmschn4</Author>
+  <LastAuthor>uqmschn4</LastAuthor>
+  <Created>2024-04-02T09:02:36Z</Created>
+  <LastSaved>2024-04-02T09:02:36Z</LastSaved>
+  <Company>company</Company>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <DownloadComponents/>
+  <LocationOfComponents HRef="/"/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9765</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="0.000\ \°\C"/>
+  </Style>
+  <Style ss:ID="s63">
+   <NumberFormat ss:Format="dd/mm/yyyy\ hh:mm:ss"/>
+  </Style>
+  <Style ss:ID="s64">
+   <NumberFormat ss:Format="0.0\ \%\R\H"/>
+  </Style>
+  <Style ss:ID="s65">
+   <NumberFormat ss:Format="0.0\ \°\C"/>
+  </Style>
+  <Style ss:ID="s66">
+   <NumberFormat ss:Format="0.00000000000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="488" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="12.5625">
+   <Column ss:Width="48.75"/>
+   <Column ss:Width="97.5"/>
+   <Column ss:Width="60.75"/>
+   <Column ss:Width="54.75"/>
+   <Column ss:Width="48.75"/>
+   <Column ss:Index="9" ss:Width="90.75"/>
+   <Column ss:Width="63"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2"><Data ss:Type="String">Time</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">S/N</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="Number">353540</Data></Cell>
+    <Cell><Data ss:Type="Number">353540</Data></Cell>
+    <Cell><Data ss:Type="Number">353540</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Type</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">TGP-4500</Data></Cell>
+    <Cell><Data ss:Type="String">TGP-4500</Data></Cell>
+    <Cell><Data ss:Type="String">csv file</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">Felicity 1</Data></Cell>
+    <Cell><Data ss:Type="String">Felicity 1</Data></Cell>
+    <Cell><Data ss:Type="String">Felicity 1</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">Chambers</Data></Cell>
+    <Cell><Data ss:Type="String">Average Temp</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Property</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">Temperature</Data></Cell>
+    <Cell><Data ss:Type="String">Humidity</Data></Cell>
+    <Cell><Data ss:Type="String">Dew Point</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3188139495798357</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">24.76493</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">67.222999999999999</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">18.273</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s62"><Data ss:Type="Number">10</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">22.7363</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">87.194999999999993</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">20.495000000000001</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">13.782</Data></Cell>
+    <Cell ss:StyleID="s66" ss:Formula="=RC[-1]-R[-2]C[-1]"><Data ss:Type="Number">7.4631860504201644</Data></Cell>
+    <Cell ss:Formula="=RC[-1]/2"><Data ss:Type="Number">3.7315930252100822</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">22.603269999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">81.691999999999993</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">19.311</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">17</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">21.935369999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">46.118000000000002</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">9.8219999999999992</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">20.084</Data></Cell>
+    <Cell ss:Formula="=RC[-1]-R[-2]C[-1]"><Data ss:Type="Number">6.3019999999999996</Data></Cell>
+    <Cell ss:Formula="=RC[-1]/2"><Data ss:Type="Number">3.1509999999999998</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">9.6090800000000005</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">62.881999999999998</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">2.8759999999999999</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">23</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7.4324399999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">44.970999999999997</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">-3.7559999999999998</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">25.788</Data></Cell>
+    <Cell ss:Formula="=RC[-1]-R[-2]C[-1]"><Data ss:Type="Number">5.7040000000000006</Data></Cell>
+    <Cell ss:Formula="=RC[-1]/2"><Data ss:Type="Number">2.8520000000000003</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7.0170500000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">20.03</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">-14.452</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">29</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">8.50732</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.8259999999999996</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">31.895</Data></Cell>
+    <Cell ss:Formula="=RC[-1]-R[-2]C[-1]"><Data ss:Type="Number">6.1069999999999993</Data></Cell>
+    <Cell ss:Formula="=RC[-1]/2"><Data ss:Type="Number">3.0534999999999997</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8264399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="Number">36.700000000000003</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6796100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.68</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.70458</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.7050000000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2217900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.2220000000000004</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8132299999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.2480000000000002</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2483399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-13T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7.0492699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4575500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.5720000000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5723099999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5855399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.3380000000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.33826</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8939199999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5075900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6766699999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.6769999999999996</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6810799999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.1890000000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.18933</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.87338</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4516600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">27</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5781900000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6384600000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">29</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4016000000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">6.4020000000000001</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7.0331599999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3338400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.9320399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4796300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5105300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7427700000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0800999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7824099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">38</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0830500000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">39</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-14T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.9027200000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.36036</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">41</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2542400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">42</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6222899999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">43</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2114599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">44</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.91005</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">45</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4016000000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">46</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3146800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">47</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8220299999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">48</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5414199999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">49</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6634399999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8851199999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">51</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8836500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">52</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7075199999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">53</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.45608</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">54</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1125800000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">55</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8220299999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">56</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0889600000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">57</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.41927</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">58</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2276899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">59</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0003099999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4045500000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">61</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7265499999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">62</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5208300000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">63</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-15T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8287399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">64</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5384799999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">65</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0623699999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">66</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9633599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">67</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3883400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">68</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7013499999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">69</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4958099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">70</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7265499999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">71</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6693199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">72</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2733999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">73</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.04908</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">74</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6649099999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">75</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0948599999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">76</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5223000000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">77</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4060199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">78</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9855299999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">79</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6619799999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9219499999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">81</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8102900000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">82</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1376799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">83</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1376799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">84</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3308900000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">85</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8613</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">86</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6296400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">87</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-16T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8080100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">88</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4943400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">89</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0800999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9737099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">91</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5428899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">92</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9677899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">93</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2925700000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">94</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4281100000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.95153</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">96</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7779999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">97</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.30436</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">98</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1199700000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">99</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7060500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1952400000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">101</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3308900000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">102</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5502500000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">103</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0756699999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">104</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6149399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">105</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3028899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">106</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.95892</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">107</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4752099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">108</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9130799999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">109</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6605100000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">110</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8805300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">111</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-17T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3824500000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">112</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1258699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">113</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8080100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">114</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3588800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">115</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.84206</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">116</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5928899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">117</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0387399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">118</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9988400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">119</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.41927</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">120</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8997700000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">121</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7779999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">122</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3102600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">123</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0623699999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">124</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7178000000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0017899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">126</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5708399999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">127</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2704500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">128</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0431699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">129</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6884199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">130</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0860000000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">131</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2984600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">132</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2910899999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">133</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8464999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">134</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5767199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">135</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-18T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8450199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">136</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4119099999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">137</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1583399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">138</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7813600000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">139</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4472399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">140</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7472899999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">141</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6516900000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">142</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8672199999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">143</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.18933</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">144</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4590199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">145</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0520300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">146</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5855399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">147</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3456200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">148</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9751899999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">149</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7222099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1553899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">151</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1981900000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">152</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4457700000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">153</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9367400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">154</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7721299999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">155</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0017899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">156</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0874800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">157</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1922800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">158</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.67171</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">159</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-19T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3338400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7295100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">161</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5870100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">162</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8805300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">163</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2158899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">164</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1391600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">165</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8287399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">166</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5384799999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">167</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9603999999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">168</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5884799999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">169</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4177999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">170</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0402100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">171</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7677300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">172</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0535100000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">173</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2055600000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">174</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4619600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">175</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9337900000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">176</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.76919</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">177</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.22621</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">178</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9648399999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">179</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4310499999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">180</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7546999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">181</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5855399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">182</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7946799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">183</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-20T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1849100000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">184</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9456199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">185</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7665499999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">186</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.11111</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">187</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.6924599999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">188</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3853999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">189</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.6924599999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">190</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.59436</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">191</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9559699999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">192</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1819600000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">193</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4398799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">194</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7931999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">195</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6678499999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">196</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0387399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">197</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2498100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">198</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3500399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">199</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9382200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7574500000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">201</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.20261</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">202</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1361999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">203</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5561299999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">204</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9397000000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">205</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3367800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">206</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3632999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">207</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-21T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8997700000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">208</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6590400000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">209</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3323600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">210</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9411800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">211</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7383600000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">212</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2439099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">213</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0431699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">214</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7618499999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">215</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3883400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">216</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1096300000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">217</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7.3111800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">218</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6046500000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">219</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0594200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">220</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7075199999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">221</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2630800000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">222</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0047499999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">223</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7398300000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">224</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0800999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">225</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0933900000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">226</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5664199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">227</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9116</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">228</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2822500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">229</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2335900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">230</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.85982</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">231</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-22T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6707900000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">232</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1007699999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">233</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9574499999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">234</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6428700000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">235</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1539200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">236</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9692699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">237</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6002400000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">238</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1052</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">239</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0239599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">240</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6046500000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">241</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1376799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">242</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2733999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">243</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7060500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">244</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1332500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">245</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.18933</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">246</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6516900000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">247</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1598199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">248</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1745799999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">249</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6516900000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2040899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">251</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9958799999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">252</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5340699999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">253</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0298699999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">254</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0919100000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-23T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4398799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">256</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9870099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">257</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2247399999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">258</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5149400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">259</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9825799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">260</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1612999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">261</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5016999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">262</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.11111</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">263</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1347300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">264</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7970800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">265</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3014099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">266</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.10372</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">267</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8381699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">268</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4546000000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">269</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1583399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">270</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5546600000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">271</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.58995</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">272</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.22621</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">273</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3294100000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">274</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8132299999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">275</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2851999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">276</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0254399999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">277</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7236700000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">278</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2527600000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">279</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-24T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9485700000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">280</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6472800000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">281</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2099900000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">282</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9618799999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">283</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6017099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">284</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2276899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">285</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9145599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">286</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6752000000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">287</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1686800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">288</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.10372</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">289</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7897499999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">290</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3736199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">291</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.13178</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">292</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5134699999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">293</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5737800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">294</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1672000000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">295</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7736000000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">296</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">7.1502999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">297</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4810999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">298</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2586599999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">299</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8278999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">300</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3942399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">301</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.07714</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">302</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4016000000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">303</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-25T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4913999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">304</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9603999999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">305</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4266300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">306</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4295799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">307</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0076999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">308</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3736199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">309</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5149400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">310</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0800999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">311</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2085100000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">312</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6017099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">313</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2276899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">314</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2704500000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">315</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.81616</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">316</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3971799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">317</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1834300000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">318</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8073600000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">319</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5664199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">320</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.26898</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">321</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3765599999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">322</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8058899999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">323</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3618300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">324</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.10372</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">325</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5840699999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">326</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.36036</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">327</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-26T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9929199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">328</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5870100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">329</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3544600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">330</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9500500000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">331</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.58995</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">332</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2453900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">333</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0032699999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">334</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7412999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">335</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3308900000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">336</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4060199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">337</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7031099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">338</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6164100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">339</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2350599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">340</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.28667</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">341</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7031099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">342</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2380100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">343</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2586599999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">344</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.86165</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">345</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3971799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">346</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1834300000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">347</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5884799999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">348</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4796300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">349</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1303000000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">350</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1170099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">351</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-27T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5575999999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">352</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0343</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">353</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1686800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">354</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5590700000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">355</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.15097</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">356</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0402100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">357</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6840099999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">358</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1553899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">359</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1361999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8117599999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">361</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3677200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">362</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1376799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">363</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.68255</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">364</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4972899999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">365</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1125800000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">366</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4855099999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">367</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4266300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">368</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9810999999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">369</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7412999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">370</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2453900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">371</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8124500000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">372</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4457700000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">373</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9766599999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">374</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0874800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">375</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-28T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3750900000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">376</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7887599999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">377</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5590700000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">378</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1686800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">379</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8968100000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">380</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6561000000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">381</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1686800000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">382</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9988400000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">383</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7559800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">384</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2380100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">385</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1612999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">386</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.8220299999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">387</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3677200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">388</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0963399999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">389</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.64581</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">390</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3397300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">391</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8627799999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">392</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6252300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">393</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1214399999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">394</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0076999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">395</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2276899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">396</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8494599999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">397</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.58995</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">398</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8746200000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">399</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-29T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0254399999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">400</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3485699999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">401</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8346600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">402</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4266300000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">403</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.25718</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">404</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9411800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">405</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4899300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">406</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3146800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">407</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0712299999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">408</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5075900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">409</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5443600000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">410</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1081500000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">411</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.36036</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">412</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5164099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">413</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0978199999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">414</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3529900000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">415</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5267099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">416</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0372599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">417</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3942399999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">418</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3957100000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">419</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7858000000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">420</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5664199999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">421</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.78728</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">422</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.12439</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">423</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-30T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9426600000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">424</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7917199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">425</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3235200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">426</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7783899999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">427</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3765599999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">428</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1612999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">429</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.7561799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">430</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5840699999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">431</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1435899999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">432</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1184900000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">433</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7589199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">434</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2748799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">435</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0402100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">436</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.7471699999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">437</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2424400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">438</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0165699999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">439</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6531599999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">440</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1303000000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">441</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9470999999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">442</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2601300000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">443</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8405800000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">444</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.58995</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">445</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9382200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">446</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.88645</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">447</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-03-31T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3190999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">448</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.78728</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">449</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4045500000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">450</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9825799999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">451</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.91012</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">452</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5090599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">453</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9737099999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">454</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1007699999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">455</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4987599999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">456</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.1199700000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">457</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T09:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.25718</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">458</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T10:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6913600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">459</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T11:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.08453</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">460</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T12:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2380100000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">461</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T13:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5326000000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">462</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T14:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9796199999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">463</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T15:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4119099999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">464</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T16:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.3544600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">465</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T17:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9633599999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">466</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T18:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.6884199999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">467</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T19:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2173600000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">468</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T20:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.8124500000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">469</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T21:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5384799999999998</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">470</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T22:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0209999999999999</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">471</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-01T23:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0623699999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">472</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T00:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4516600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">473</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T01:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9485700000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">474</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T02:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.25129</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">475</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T03:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.5046400000000002</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">476</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T04:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">5.9751899999999996</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">477</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T05:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.2645600000000004</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">478</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T06:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4222200000000003</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">479</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T07:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.0815700000000001</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">480</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="DateTime">2024-04-02T08:18:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="Number">6.4177999999999997</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s62" ss:Formula="=AVERAGE(R[-476]C:R[-1]C)"><Data
+      ss:Type="Number">6.3188139495798357</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s62" ss:Formula="=MIN(R[-481]C:R[-2]C)"><Data
+      ss:Type="Number">5.67171</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s62" ss:Formula="=MAX(R[-478]C:R[-3]C)"><Data
+      ss:Type="Number">9.6090800000000005</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Selected/>
+   <LeftColumnVisible>1</LeftColumnVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>13</ActiveRow>
+     <ActiveCol>7</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="12.5625">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <TopRowVisible>2</TopRowVisible>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="12.5625">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
