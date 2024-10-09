@@ -42,27 +42,27 @@ cor.test(littoralis$X.ray_proportion_viable[littoralis$Replicate == 2], littoral
 cor.test(littoralis$X.ray_proportion_viable[littoralis$Replicate == 3], littoralis$TTC_proportion_viable[littoralis$Replicate == 3])
 
 
-dev.new(height = 15, width = 15, dpi = 80, pointsize = 16, noRStudioGD = T)
+dev.new(height = 30, width = 30, dpi = 80, pointsize = 16, noRStudioGD = T)
 par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(4, 3), oma = c(0,0,0,9), cex.axis = 1.5, cex.lab = 1.5)
  
 plot(littoralis$X.ray_proportion_viable, littoralis$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "Tetrazoloium", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(littoralis$X.ray_proportion_viable[littoralis$Replicate == 1], littoralis$TTC_proportion_viable[littoralis$Replicate == 1], col = "#A50026", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.57", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.57", adj = 0, cex = 1.2)
+text(0.05, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
 title(expression(bold('(a) '*bolditalic(Allocasuarina~littoralis))))
 
 
 plot(torulosa_lo$X.ray_proportion_viable, torulosa_lo$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_lo$X.ray_proportion_viable[torulosa_lo$Replicate == 1], torulosa_lo$TTC_proportion_viable[torulosa_lo$Replicate == 1], col = "#A50026", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.77", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.77", adj = 0, cex = 1.2)
+text(0.05, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
 title(expression(bold('(b) '*bolditalic(Allocasuarina~torulosa)*' low fire')))
 
 
 plot(torulosa_hi$X.ray_proportion_viable, torulosa_hi$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_hi$X.ray_proportion_viable[torulosa_hi$Replicate == 1], torulosa_hi$TTC_proportion_viable[torulosa_hi$Replicate == 1], col = "#A50026", pch = 20)
-text(0.1, 0.8, labels = "Pearson's r = 0.44", adj = 0, cex = 1.2)
-text(0.1, 0.7, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.8, labels = "Pearson's r = 0.44", adj = 0, cex = 1.2)
+text(0.05, 0.7, labels = "p < 0.001", adj = 0, cex = 1.2)
 title(expression(bold('(c) '*bolditalic(Allocasuarina~torulosa)*' high fire')))
 
 
@@ -79,20 +79,20 @@ legend(x = 1.1, y = 0.70, legend = c("Replicate 1", "Replicate 2", "Replicate 3"
 
 plot(littoralis$X.ray_proportion_viable, littoralis$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "Tetrazolium", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(littoralis$X.ray_proportion_viable[littoralis$Replicate == 2], littoralis$TTC_proportion_viable[littoralis$Replicate == 2], col = "#FDAE61", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.82", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.4, labels = "Pearson's r = 0.82", adj = 0, cex = 1.2)
+text(0.05, 0.3, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 plot(torulosa_lo$X.ray_proportion_viable, torulosa_lo$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_lo$X.ray_proportion_viable[torulosa_lo$Replicate == 2], torulosa_lo$TTC_proportion_viable[torulosa_lo$Replicate == 2], col = "#FDAE61", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.82", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.4, labels = "Pearson's r = 0.82", adj = 0, cex = 1.2)
+text(0.05, 0.3, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 plot(torulosa_hi$X.ray_proportion_viable, torulosa_hi$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_hi$X.ray_proportion_viable[torulosa_hi$Replicate == 2], torulosa_hi$TTC_proportion_viable[torulosa_hi$Replicate == 2], col = "#FDAE61", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.82", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.4, labels = "Pearson's r = 0.82", adj = 0, cex = 1.2)
+text(0.05, 0.3, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 
@@ -102,21 +102,21 @@ text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 plot(littoralis$X.ray_proportion_viable, littoralis$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "Tetrazolium", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(littoralis$X.ray_proportion_viable[littoralis$Replicate == 3], littoralis$TTC_proportion_viable[littoralis$Replicate == 3], col = "#313695", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.78", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.78", adj = 0, cex = 1.2)
+text(0.05, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 
 plot(torulosa_lo$X.ray_proportion_viable, torulosa_lo$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_lo$X.ray_proportion_viable[torulosa_lo$Replicate == 3], torulosa_lo$TTC_proportion_viable[torulosa_lo$Replicate == 3], col = "#313695", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.84", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.84", adj = 0, cex = 1.2)
+text(0.05, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 plot(torulosa_hi$X.ray_proportion_viable, torulosa_hi$TTC_proportion_viable, pch = NA, col = pal1, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_hi$X.ray_proportion_viable[torulosa_hi$Replicate == 3], torulosa_hi$TTC_proportion_viable[torulosa_hi$Replicate == 3], col = "#313695", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.58", adj = 0, cex = 1.2)
-text(0.1, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.58", adj = 0, cex = 1.2)
+text(0.05, 0.8, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 
@@ -127,24 +127,24 @@ plot(littoralis$X.ray_proportion_viable, littoralis$TTC_proportion_viable, pch =
 points(littoralis$X.ray_proportion_viable[littoralis$Replicate == 1], littoralis$TTC_proportion_viable[littoralis$Replicate == 1], col = "#A50026", pch = 20)
 points(littoralis$X.ray_proportion_viable[littoralis$Replicate == 2], littoralis$TTC_proportion_viable[littoralis$Replicate == 2], col = "#FDAE61", pch = 20)
 points(littoralis$X.ray_proportion_viable[littoralis$Replicate == 3], littoralis$TTC_proportion_viable[littoralis$Replicate == 3], col = "#313695", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.71", adj = 0, cex = 1.2)
-text(0.25, 0.8, labels = "p < 0.001", cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.71", adj = 0, cex = 1.2)
+text(0.22, 0.8, labels = "p < 0.001", cex = 1.2)
 
 
 plot(torulosa_lo$X.ray_proportion_viable, torulosa_lo$TTC_proportion_viable, pch = NA, col = pal1, xlab = "X-ray", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_lo$X.ray_proportion_viable[torulosa_lo$Replicate == 1], torulosa_lo$TTC_proportion_viable[torulosa_lo$Replicate == 1], col = "#A50026", pch = 20)
 points(torulosa_lo$X.ray_proportion_viable[torulosa_lo$Replicate == 2], torulosa_lo$TTC_proportion_viable[torulosa_lo$Replicate == 2], col = "#FDAE61", pch = 20)
 points(torulosa_lo$X.ray_proportion_viable[torulosa_lo$Replicate == 3], torulosa_lo$TTC_proportion_viable[torulosa_lo$Replicate == 3], col = "#313695", pch = 20)
-text(0.1, 0.9, labels = "Pearson's r = 0.81", adj = 0, cex = 1.2)
-text(0.25, 0.8, labels = "p < 0.001", cex = 1.2)
+text(0.05, 0.9, labels = "Pearson's r = 0.81", adj = 0, cex = 1.2)
+text(0.22, 0.8, labels = "p < 0.001", cex = 1.2)
 
 
 plot(torulosa_hi$X.ray_proportion_viable, torulosa_hi$TTC_proportion_viable, pch = NA, col = pal1, xlab = "X-ray", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(torulosa_hi$X.ray_proportion_viable[torulosa_hi$Replicate == 1], torulosa_hi$TTC_proportion_viable[torulosa_hi$Replicate == 1], col = "#A50026", pch = 20)
 points(torulosa_hi$X.ray_proportion_viable[torulosa_hi$Replicate == 2], torulosa_hi$TTC_proportion_viable[torulosa_hi$Replicate == 2], col = "#FDAE61", pch = 20)
 points(torulosa_hi$X.ray_proportion_viable[torulosa_hi$Replicate == 3], torulosa_hi$TTC_proportion_viable[torulosa_hi$Replicate == 3], col = "#313695", pch = 20)
-text(0.1, 0.85, labels = "Pearson's r = 0.61", adj = 0, cex = 1.2)
-text(0.1, 0.75, labels = "p < 0.001", adj = 0, cex = 1.2)
+text(0.09, 0.85, labels = "Pearson's r = 0.61", adj = 0, cex = 1.2)
+text(0.09, 0.75, labels = "p < 0.001", adj = 0, cex = 1.2)
 
 
 
