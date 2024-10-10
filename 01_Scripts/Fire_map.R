@@ -1,10 +1,8 @@
-@ -0,0 +1,145 @@
-  
-  
-  # Mape of fire frequency and sample locations for germination experiment
-  # Written by Felicity Charles
-  # Caveat emptor
-  # Date: 10th October 2024
+
+# Mape of fire frequency and sample locations for germination experiment
+# Written by Felicity Charles
+# Caveat emptor
+# Date: 10th October 2024
   
   # 1. Load packages -----
 library(sf)
