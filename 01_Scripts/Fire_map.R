@@ -13,6 +13,7 @@ library(leaflet)
 library(ggplot2)
 library(tidyterra)
 library(ggspatial)
+library(cowplot)
 
 sf::sf_use_s2(FALSE)
 
@@ -45,7 +46,26 @@ protected_areas <- vect('E:/ADATA/QLD/QLD_Protected_areas/QSC_Extracted_Data_202
   project('EPSG:3577') %>% 
   crop(e)
 
+# Download nature refuge files from internet and unzip
+Bulimbah <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-bulimbah-nature-refuge.kmz", destfile = './00_Data/Spatial data/Bulimbah_nature_refuge.kmz', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial data/Bulimbah_nature_refuge.kmz', exdir = './00_Data/Spatial data/')
 
+Gillies <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-gillies-ridge-nature-refuge.kmz", destfile = './00_Data/Spatial data/Gillies_nature_refuge.kmz', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial data/Gillies_nature_refuge.kmz', exdir = './00_Data/Spatial data/')
+
+Bartopia <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-bartopia-nature-refuge.kmz", destfile = './00_Data/Spatial data/Bartopia.kmz', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial data/Bartopia.kmz', exdir = './00_Data/Spatial data/')
+
+
+# Read in nature refuge files
+HV <- vect('./00_Data/Spatial data/OHV_perimeter.kml') %>% 
+  project('EPSG:3577')
+Gillies <- vect('./00_Data/Spatial data/nature-refuge-gillies-ridge-nature-refuge.kml') %>% 
+  project('EPSG:3577')
+Bulimbah <- vect('./00_Data/Spatial data/nature-refuge-bulimbah-nature-refuge.kml') %>% 
+  project('EPSG:3577')
+Bartopia <- vect('./00_Data/Spatial data/nature-refuge-bartopia-nature-refuge.kml') %>% 
+  project('EPSG:3577')
 
 # 4. Calculate fire frequency for QPWS estates ----
 # These steps have already been run in a different project. Code for producing this file is copied below but we will just read in the final output.
@@ -105,6 +125,10 @@ p1 <- ggplot() +
   theme_minimal()+
   scale_fill_continuous(na.value = "transparent", breaks = c(1,11),low = "#FFF5F0", high = "darkred")+  #Note we can change na.value to be "white", this would allow us to put any 0s as NAs and easily show these areas as white
   geom_spatvector(data = protected_areas, fill = NA, colour = "#4D60A9") +
+  geom_spatvector(data = Gillies, fill = NA, colour = '#4D50A9') +
+  geom_spatvector(data = HV, fill = NA, colour = '#4D50A9')+
+  geom_spatvector(data = Bartopia, fill = NA, colour = '#4D50A9')+
+  geom_spatvector(data = Bulimbah, fill = NA, colour = '#4D50A9')+
   geom_spatvector(data = sdat_r2, aes(col = fire_cat, shape = fire_cat), size = 2)+
   scale_shape_manual(values = c(19, 17, 17)) +
   scale_color_manual(values = c("mediumblue",  "steelblue4", "dodgerblue2"))+
