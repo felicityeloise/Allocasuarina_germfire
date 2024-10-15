@@ -1,5 +1,5 @@
 Species	Seed_lot	Temperature	Duration	X2	X4	X7	X9	X11	X14	X16	X18	X21	X23	X25	X28	X30	X32	X35	X37	X39	Total_germ	Total_seeds	Total_viable	Total_seeds_adjusted	Time_to_germ	Time_to_finish
-torulosa	T1	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	13	20	4	16	7	7
+torulosa	T1	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	13	20	4	17	7	7
 torulosa	T2	0	0	0	0	17	2	0	0	0	0	0	0	0	0	0	0	0	0	0	19	20	0	20	7	9
 torulosa	WPS73	0	0	0	0	9	2	0	0	0	0	0	0	0	0	0	1	0	0	0	12	20	1	19	7	32
 littoralis	WPS89	0	0	0	0	0	1	0	0	16	0	0	0	0	0	0	0	0	0	0	17	20	0	20	9	16
