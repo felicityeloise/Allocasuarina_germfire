@@ -41,7 +41,7 @@ plet(sdat_r)
 
 # 3. Read and format environmental spatial data ----
 # Before reading the data in, create an extent object that captures the study area
-e <- ext(1935620, 2021296, -3241847, -3126599)
+e <- ext(1937184, 2019240, -3241075, -3126720)
 protected_areas <- vect('E:/ADATA/QLD/QLD_Protected_areas/QSC_Extracted_Data_20220221_143858585000-64332/Protected_areas.shp') %>% 
   project('EPSG:3577') %>% 
   crop(e)
