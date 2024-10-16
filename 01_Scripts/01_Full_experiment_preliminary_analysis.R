@@ -49,6 +49,8 @@ unique(torhigh$Treatment)
 
 
 # 3. Calculate the cumulative proportions of germination 
+
+# We want to calculate the adjusted proportion germinated as this will account for the fact that some seeds were not vaible, it does not appear from the preliminary investigations of the correlations between the two viability measurements that any one treatment had a significant effect on post-germination seed viability so there should not be any issue that those that were considered unviable were exposed to a treatment that necessarily killed the seeds 
 lit_cum.sum <- data.frame(t(apply(littoralis[, 12:ncol(littoralis)], 1, FUN = function(x) cumsum(unlist(x)))))
 littoralis$Total_adjusted <- littoralis$Total_germination + littoralis$TTC_num_viable # Calculate the number of seeds that were actually viable as we want to calculate the adjusted proportion germination for the number of viable seeds
 
@@ -66,6 +68,7 @@ torl_cum.sum <- data.frame(t(apply(torlow[, 12:ncol(torlow)], 1, FUN = function(
 torl_cum.prop <- torl_cum.sum/torlow$Total_seeds
 torl_cum.prop <- cbind(torlow[, 1:11], torl_cum.prop)
 head(torl_cum.prop); dim(torl_cum.prop)
+
 
 
 torh_cum.sum <- data.frame(t(apply(torhigh[, 12:ncol(torhigh)], 1, FUN = function(x) cumsum(unlist(x)))))
@@ -153,6 +156,68 @@ title(xlab = "Treatment", line = 5)
 boxplot(TTC_proportion_viable ~ Treatment, data = torhigh, xlab = "Treatment", ylab = "Proportion germinated")
 
 
+
+
+
+
+
+
+dev.new(height = 110, width = 90, dpi = 80, pointsize = 18, noRStudioGD = T)
+par(mar = c(8,4,2,1), mgp = c(3,1,0), mfrow = c(3,3), oma = c(1, 2, 3, 0))
+
+boxplot(TTC_proportion_viable ~ Treatment, data = littoralis[which(littoralis$Set == 1),], xlab = "", ylab = expression(bold("Proportion germinated")), xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+title('Rep. 1', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(TTC_proportion_viable ~ Treatment, data = littoralis[which(littoralis$Set == 2),], xlab = "", ylab = "", xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+title('Rep. 2', font.main = 1)
+mtext(expression(bolditalic(Allocasuarina~littoralis)), side = 3, line = 2)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(TTC_proportion_viable ~ Treatment, data = littoralis[which(littoralis$Set == 3),], xlab = "", ylab = "", xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+title('Rep. 3', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+
+### Torulosa low fire
+boxplot(TTC_proportion_viable ~ Treatment, data = torlow[which(torlow$Set == 1),], xlab = "", ylab = expression(bold("Proportion germinated")), xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(TTC_proportion_viable ~ Treatment, data = torlow[which(torlow$Set == 2),], xlab = "", ylab = "", xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+mtext(expression(bold(bolditalic(Allocasuarina~torulosa)*' low fire')), side = 3, line = 0.75)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(TTC_proportion_viable ~ Treatment, data = torlow[which(torlow$Set == 3),], xlab = "", ylab = "", xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+### Torulosa high
+boxplot(TTC_proportion_viable ~ Treatment, data = torhigh[which(torhigh$Set == 1),], xlab = "", ylab = expression(bold("Proportion germinated")), xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6, cex.lab = 1.1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(TTC_proportion_viable ~ Treatment, data = torhigh[which(torhigh$Set == 2),], xlab = "", ylab = "", xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6, cex.lab = 1.1)
+mtext(expression(bold(bolditalic(Allocasuarina~torulosa)*' high fire')), side = 3, line = 0.75)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(TTC_proportion_viable ~ Treatment, data = torhigh[which(torhigh$Set == 3),], xlab = "", ylab = "", xaxt = "n", ylim = c(0,1), cex.lab = 1.1, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6, cex.lab = 1.1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+
+
+
+
+
 # Germination metrics ----
 
 # Clean the datasets to remove unneccessary columns
@@ -202,36 +267,193 @@ l1 <- littoralis_cumulative[1,] %>%
          germ_uncertainty = GermUncertainty(germ.counts = as.numeric(littoralis_cumulative[1, 5:65]), intervals = int, partial = F))
 
 
-# Throws an error message but ignored this as the expected results are returned
-for(i in 1:nrow(littoralis_cumulative)){
+# Throws an error message but ignored this as the expected results are returned. However, we need to split the data into blocks of 50 to make sure this is working correctly
+dim(littoralis_cumulative)
+littoralis_cumulative1 <- littoralis_cumulative[1:50,]
+dim(littoralis_cumulative1)
+
+littoralis_cumulative2 <- littoralis_cumulative[51:100,]
+littoralis_cumulative3 <- littoralis_cumulative[101:150,]
+littoralis_cumulative4 <- littoralis_cumulative[151:200,]
+littoralis_cumulative5 <- littoralis_cumulative[201:250,]
+littoralis_cumulative6 <- littoralis_cumulative[251:nrow(littoralis_cumulative),]
+
+
+# Littoralis block 1
+for(i in 1:nrow(littoralis_cumulative1)){
   
-  littoralis_cumulative$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative[i, 4])
-  littoralis_cumulative$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative[i, 4])
-  littoralis_cumulative$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative[i, 4])
-  littoralis_cumulative$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative[i, 4])
-  littoralis_cumulative$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
-  littoralis_cumulative$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative1[i, 4])
+  littoralis_cumulative1$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative1[i, 4])
+  littoralis_cumulative1$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative1[i, 4])
+  littoralis_cumulative1$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative1[i, 4])
+  littoralis_cumulative1$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative1$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative1[i, 5:65]), intervals = int, partial = F)
   
   
 }
 
-littoralis_cumulative 
+littoralis_cumulative1
+
+# Littoralis block 2 
+for(i in 1:nrow(littoralis_cumulative2)){
+  
+  littoralis_cumulative2$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative2[i, 4])
+  littoralis_cumulative2$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative2[i, 4])
+  littoralis_cumulative2$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative2[i, 4])
+  littoralis_cumulative2$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative2[i, 4])
+  littoralis_cumulative2$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative2$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative2[i, 5:65]), intervals = int, partial = F)
+  
+  
+}
+
+littoralis_cumulative2
 
 
-# Check if a couple of the rows match between the for loop version or a row by row calculation where we do not get an error message
+# Littoralis block 3
+for(i in 1:nrow(littoralis_cumulative3)){
+  
+  littoralis_cumulative3$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative3[i, 4])
+  littoralis_cumulative3$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative3[i, 4])
+  littoralis_cumulative3$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative3[i, 4])
+  littoralis_cumulative3$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative3[i, 4])
+  littoralis_cumulative3$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative3$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative3[i, 5:65]), intervals = int, partial = F)
+  
+  
+}
+
+littoralis_cumulative3
+
+# Littoralis block 4
+for(i in 1:nrow(littoralis_cumulative4)){
+  
+  littoralis_cumulative4$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative4[i, 4])
+  littoralis_cumulative4$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative4[i, 4])
+  littoralis_cumulative4$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative4[i, 4])
+  littoralis_cumulative4$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative4[i, 4])
+  littoralis_cumulative4$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative4$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative4[i, 5:65]), intervals = int, partial = F)
+  
+  
+}
+
+littoralis_cumulative4
+
+# Littoralis block 5
+for(i in 1:nrow(littoralis_cumulative5)){
+  
+  littoralis_cumulative5$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative5[i, 4])
+  littoralis_cumulative5$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative5[i, 4])
+  littoralis_cumulative5$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative5[i, 4])
+  littoralis_cumulative5$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative5[i, 4])
+  littoralis_cumulative5$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative5$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative5[i, 5:65]), intervals = int, partial = F)
+  
+  
+}
+
+littoralis_cumulative5
+
+# Littoralis block 6
+for(i in 1:nrow(littoralis_cumulative6)){
+  
+  littoralis_cumulative6$t50[i] <- t50(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative6[i, 4])
+  littoralis_cumulative6$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$germ_end[i] <- LastGermTime(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F, percent = F, total.seeds = littoralis_cumulative6[i, 4])
+  littoralis_cumulative6$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative6[i, 4])
+  littoralis_cumulative6$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F, total.seeds = littoralis_cumulative6[i, 4])
+  littoralis_cumulative6$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  littoralis_cumulative6$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(littoralis_cumulative6[i, 5:65]), intervals = int, partial = F)
+  
+  
+}
+
+littoralis_cumulative6
+
+
+# Combine littoralis blocks back into one set 
+littoralis_cumulative <- rbind(littoralis_cumulative1, littoralis_cumulative2, littoralis_cumulative3, littoralis_cumulative4, littoralis_cumulative5, littoralis_cumulative6)
+head(littoralis_cumulative); tail(littoralis_cumulative); dim(littoralis_cumulative)
+
+# Check if rows match between the for loop version or a row by row calculation ----
 littoralis_cumulative[1,]
 l1
 
@@ -280,178 +502,961 @@ l72 <- littoralis_cumulative[72,] %>%
          germ_uncertainty = GermUncertainty(germ.counts = as.numeric(littoralis_cumulative[72, 5:65]), intervals = int, partial = F))
 
 l72
-littoralis_cumulative[72,] # Some values do change slightly, most we will probably use did not change. Could be related to the multiple peaks in some cases.
+littoralis_cumulative[72,] # Now that we have done the calculation in blocks of 50, rather than as a whole large set for the for loop, the values match between the dplyr implementation and the for loop implementation
 
 
 
-# We are going to say that this for loop calculation works how it should, if we think any values are out of range of what we expect we can always recalculate for the specific rows that are problematic.
 
 # Torulosa low fire ----
-for(i in 1:nrow(torlow_cumulative)){
-  torlow_cumulative$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+
+# Split data into blocks
+
+torlow_cumulative1 <- torlow_cumulative[1:50,]
+torlow_cumulative2 <- torlow_cumulative[51:100,]
+torlow_cumulative3 <- torlow_cumulative[101:150,]
+torlow_cumulative4 <- torlow_cumulative[151:200,]
+torlow_cumulative5 <- torlow_cumulative[201:250,]
+torlow_cumulative6 <- torlow_cumulative[251:nrow(torlow_cumulative),]
+
+# Torulosa low block 1
+for(i in 1:nrow(torlow_cumulative1)){
+  torlow_cumulative1$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                   intervals = int,
                                   partial = F)
-  torlow_cumulative$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                             intervals = int,
                                                             partial = F,
-                                                            total.seeds = torlow_cumulative[i, 4])
-  torlow_cumulative$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+                                                            total.seeds = torlow_cumulative1[i, 4])
+  torlow_cumulative1$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                    intervals = int,
                                                    partial = F)
-  torlow_cumulative$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                 intervals = int,
                                                 partial = F)
-  torlow_cumulative$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                     intervals = int,
                                                     partial = F)
-  torlow_cumulative$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                       intervals = int,
                                                       partial = F)
-  torlow_cumulative$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                     intervals = int,
                                                     partial = F)
-  torlow_cumulative$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                   intervals = int,
                                                   partial = F)
-  torlow_cumulative$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                   intervals = int,
                                                   partial = F)
-  torlow_cumulative$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                       intervals = int,
                                                       partial = F)
-  torlow_cumulative$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                         intervals = int,
                                                         partial = F)
-  torlow_cumulative$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                          intervals = int,
                                                          partial = F)
-  torlow_cumulative$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                intervals = int,
                                                partial = F)
-  torlow_cumulative$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                             intervals = int,
                                             partial = F,
-                                            total.seeds = torlow_cumulative[i, 4])
-  torlow_cumulative$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+                                            total.seeds = torlow_cumulative1[i, 4])
+  torlow_cumulative1$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                                   intervals = int,
                                                                   partial = F,
-                                                                  total.seeds = torlow_cumulative[i, 4])
-  torlow_cumulative$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+                                                                  total.seeds = torlow_cumulative1[i, 4])
+  torlow_cumulative1$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                             intervals = int,
                                                             partial = F,
-                                                            total.seeds = torlow_cumulative[i, 4])
-  torlow_cumulative$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+                                                            total.seeds = torlow_cumulative1[i, 4])
+  torlow_cumulative1$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                           intervals = int,
                                                           partial = F)
-  torlow_cumulative$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                        intervals = int,
                                                        partial = F)
-  torlow_cumulative$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative[i, 5:65]),
+  torlow_cumulative1$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative1[i, 5:65]),
                                                            intervals = int,
                                                            partial = F)
   
 }
-torlow_cumulative
+torlow_cumulative1
+
+
+# Torulosa low block 2
+for(i in 1:nrow(torlow_cumulative2)){
+  torlow_cumulative2$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                  intervals = int,
+                                  partial = F)
+  torlow_cumulative2$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative2[i, 4])
+  torlow_cumulative2$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torlow_cumulative2$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                intervals = int,
+                                                partial = F)
+  torlow_cumulative2$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative2$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative2$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative2$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative2$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative2$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative2$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torlow_cumulative2$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torlow_cumulative2$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative2$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                               intervals = int,
+                                               partial = F,
+                                               total.seeds = torlow_cumulative2[i, 4])
+  torlow_cumulative2$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                                  intervals = int,
+                                                                  partial = F,
+                                                                  total.seeds = torlow_cumulative2[i, 4])
+  torlow_cumulative2$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative2[i, 4])
+  torlow_cumulative2$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F)
+  torlow_cumulative2$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torlow_cumulative2$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative2[i, 5:65]),
+                                                           intervals = int,
+                                                           partial = F)
+  
+}
+torlow_cumulative2
+
+
+# Torulosa low block 3
+for(i in 1:nrow(torlow_cumulative3)){
+  torlow_cumulative3$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                  intervals = int,
+                                  partial = F)
+  torlow_cumulative3$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative3[i, 4])
+  torlow_cumulative3$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torlow_cumulative3$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                intervals = int,
+                                                partial = F)
+  torlow_cumulative3$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative3$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative3$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative3$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative3$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative3$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative3$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torlow_cumulative3$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torlow_cumulative3$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative3$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                               intervals = int,
+                                               partial = F,
+                                               total.seeds = torlow_cumulative3[i, 4])
+  torlow_cumulative3$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                                  intervals = int,
+                                                                  partial = F,
+                                                                  total.seeds = torlow_cumulative3[i, 4])
+  torlow_cumulative3$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative3[i, 4])
+  torlow_cumulative3$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F)
+  torlow_cumulative3$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torlow_cumulative3$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative3[i, 5:65]),
+                                                           intervals = int,
+                                                           partial = F)
+  
+}
+torlow_cumulative3
+
+# Torulosa low block 4
+for(i in 1:nrow(torlow_cumulative4)){
+  torlow_cumulative4$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                  intervals = int,
+                                  partial = F)
+  torlow_cumulative4$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative4[i, 4])
+  torlow_cumulative4$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torlow_cumulative4$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                intervals = int,
+                                                partial = F)
+  torlow_cumulative4$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative4$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative4$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative4$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative4$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative4$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative4$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torlow_cumulative4$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torlow_cumulative4$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative4$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                               intervals = int,
+                                               partial = F,
+                                               total.seeds = torlow_cumulative4[i, 4])
+  torlow_cumulative4$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                                  intervals = int,
+                                                                  partial = F,
+                                                                  total.seeds = torlow_cumulative4[i, 4])
+  torlow_cumulative4$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative4[i, 4])
+  torlow_cumulative4$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F)
+  torlow_cumulative4$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torlow_cumulative4$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative4[i, 5:65]),
+                                                           intervals = int,
+                                                           partial = F)
+  
+}
+torlow_cumulative4
+
+# Torulosa low block 5
+for(i in 1:nrow(torlow_cumulative5)){
+  torlow_cumulative5$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                  intervals = int,
+                                  partial = F)
+  torlow_cumulative5$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative5[i, 4])
+  torlow_cumulative5$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torlow_cumulative5$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                intervals = int,
+                                                partial = F)
+  torlow_cumulative5$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative5$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative5$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative5$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative5$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative5$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative5$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torlow_cumulative5$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torlow_cumulative5$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative5$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                               intervals = int,
+                                               partial = F,
+                                               total.seeds = torlow_cumulative5[i, 4])
+  torlow_cumulative5$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                                  intervals = int,
+                                                                  partial = F,
+                                                                  total.seeds = torlow_cumulative5[i, 4])
+  torlow_cumulative5$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative5[i, 4])
+  torlow_cumulative5$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F)
+  torlow_cumulative5$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torlow_cumulative5$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative5[i, 5:65]),
+                                                           intervals = int,
+                                                           partial = F)
+  
+}
+torlow_cumulative5
+
+
+# Torulosa low block 6
+for(i in 1:nrow(torlow_cumulative6)){
+  torlow_cumulative6$t50[i] <- t50(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                  intervals = int,
+                                  partial = F)
+  torlow_cumulative6$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative6[i, 4])
+  torlow_cumulative6$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torlow_cumulative6$germ_end[i] <- LastGermTime(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                intervals = int,
+                                                partial = F)
+  torlow_cumulative6$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative6$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative6$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torlow_cumulative6$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative6$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative6$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                      intervals = int,
+                                                      partial = F)
+  torlow_cumulative6$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torlow_cumulative6$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torlow_cumulative6$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                  intervals = int,
+                                                  partial = F)
+  torlow_cumulative6$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                               intervals = int,
+                                               partial = F,
+                                               total.seeds = torlow_cumulative6[i, 4])
+  torlow_cumulative6$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                                  intervals = int,
+                                                                  partial = F,
+                                                                  total.seeds = torlow_cumulative6[i, 4])
+  torlow_cumulative6$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F,
+                                                            total.seeds = torlow_cumulative6[i, 4])
+  torlow_cumulative6$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F)
+  torlow_cumulative6$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torlow_cumulative6$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torlow_cumulative6[i, 5:65]),
+                                                           intervals = int,
+                                                           partial = F)
+  
+}
+torlow_cumulative6
+
+
+# Combine torulosa low blocks
+
+torlow_cumulative <- rbind(torlow_cumulative1, torlow_cumulative2, torlow_cumulative3, torlow_cumulative4, torlow_cumulative5, torlow_cumulative6)
+head(torlow_cumulative); tail(torlow_cumulative); dim(torlow_cumulative)
+
 
 
 
 # Torulosa high fire -----
-for(i in 1:nrow(torhigh_cumulative)){
-  torhigh_cumulative$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+# Split torulosa high fire into blocks
+torhigh_cumulative1 <- torhigh_cumulative[1:50,]
+torhigh_cumulative2 <- torhigh_cumulative[51:100,]
+torhigh_cumulative3 <- torhigh_cumulative[101:150,]
+torhigh_cumulative4 <- torhigh_cumulative[151:200,]
+torhigh_cumulative5 <- torhigh_cumulative[201:250,]
+torhigh_cumulative6 <- torhigh_cumulative[251:nrow(torhigh_cumulative),]
+
+# Torulosa high block 1
+for(i in 1:nrow(torhigh_cumulative1)){
+  torhigh_cumulative1$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                   intervals = int,
                                   partial = F)
-  torhigh_cumulative$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                              intervals = int,
                                                              partial = F,
-                                                             total.seeds = torhigh_cumulative[i, 4])
-  torhigh_cumulative$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+                                                             total.seeds = torhigh_cumulative1[i, 4])
+  torhigh_cumulative1$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                     intervals = int,
                                                     partial = F)
-  torhigh_cumulative$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                     intervals = int,
                                                     partial = F)
-  torhigh_cumulative$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                      intervals = int,
                                                      partial = F)
-  torhigh_cumulative$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                        intervals = int,
                                                        partial = F)
-  torhigh_cumulative$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                      intervals = int,
                                                      partial = F)
-  torhigh_cumulative$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                   intervals = int,
                                                   partial = F)
-  torhigh_cumulative$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                    intervals = int,
                                                    partial = F)
-  torhigh_cumulative$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                        intervals = int,
                                                        partial = F)
-  torhigh_cumulative$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                          intervals = int,
                                                          partial = F)
-  torhigh_cumulative$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                           intervals = int,
                                                           partial = F)
-  torhigh_cumulative$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                    intervals = int,
                                                    partial = F)
-  torhigh_cumulative$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                 intervals = int,
                                                 partial = F,
-                                                total.seeds = torhigh_cumulative[i, 4])
-  torhigh_cumulative$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+                                                total.seeds = torhigh_cumulative1[i, 4])
+  torhigh_cumulative1$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                                    intervals = int,
                                                                    partial = F,
-                                                                   total.seeds = torhigh_cumulative[i, 4])
-  torhigh_cumulative$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+                                                                   total.seeds = torhigh_cumulative1[i, 4])
+  torhigh_cumulative1$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                              intervals = int,
                                                              partial = F,
-                                                             total.seeds = torhigh_cumulative[i, 4])
-  torhigh_cumulative$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+                                                             total.seeds = torhigh_cumulative1[i, 4])
+  torhigh_cumulative1$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                               intervals = int,
                                                               partial = F)
-  torhigh_cumulative$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                         intervals = int,
                                                         partial = F)
-  torhigh_cumulative$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative[i, 5:65]),
+  torhigh_cumulative1$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative1[i, 5:65]),
                                                             intervals = int,
                                                             partial = F)
 }
+torhigh_cumulative1
 
-torhigh_cumulative
+# Torulosa high block 2
+for(i in 1:nrow(torhigh_cumulative2)){
+  torhigh_cumulative2$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                   intervals = int,
+                                   partial = F)
+  torhigh_cumulative2$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative2[i, 4])
+  torhigh_cumulative2$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative2$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative2$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative2$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative2$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative2$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative2$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative2$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative2$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torhigh_cumulative2$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                          intervals = int,
+                                                          partial = F)
+  torhigh_cumulative2$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative2$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                intervals = int,
+                                                partial = F,
+                                                total.seeds = torhigh_cumulative2[i, 4])
+  torhigh_cumulative2$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                                   intervals = int,
+                                                                   partial = F,
+                                                                   total.seeds = torhigh_cumulative2[i, 4])
+  torhigh_cumulative2$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative2[i, 4])
+  torhigh_cumulative2$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                              intervals = int,
+                                                              partial = F)
+  torhigh_cumulative2$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torhigh_cumulative2$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative2[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F)
+}
+torhigh_cumulative2
+
+# Torulosa high block 3
+for(i in 1:nrow(torhigh_cumulative3)){
+  torhigh_cumulative3$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                   intervals = int,
+                                   partial = F)
+  torhigh_cumulative3$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative3[i, 4])
+  torhigh_cumulative3$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative3$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative3$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative3$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative3$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative3$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative3$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative3$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative3$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torhigh_cumulative3$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                          intervals = int,
+                                                          partial = F)
+  torhigh_cumulative3$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative3$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                intervals = int,
+                                                partial = F,
+                                                total.seeds = torhigh_cumulative3[i, 4])
+  torhigh_cumulative3$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                                   intervals = int,
+                                                                   partial = F,
+                                                                   total.seeds = torhigh_cumulative3[i, 4])
+  torhigh_cumulative3$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative3[i, 4])
+  torhigh_cumulative3$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                              intervals = int,
+                                                              partial = F)
+  torhigh_cumulative3$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torhigh_cumulative3$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative3[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F)
+}
+torhigh_cumulative3
+
+
+# Torulosa high block 4
+for(i in 1:nrow(torhigh_cumulative4)){
+  torhigh_cumulative4$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                   intervals = int,
+                                   partial = F)
+  torhigh_cumulative4$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative4[i, 4])
+  torhigh_cumulative4$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative4$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative4$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative4$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative4$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative4$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative4$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative4$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative4$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torhigh_cumulative4$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                          intervals = int,
+                                                          partial = F)
+  torhigh_cumulative4$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative4$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                intervals = int,
+                                                partial = F,
+                                                total.seeds = torhigh_cumulative4[i, 4])
+  torhigh_cumulative4$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                                   intervals = int,
+                                                                   partial = F,
+                                                                   total.seeds = torhigh_cumulative4[i, 4])
+  torhigh_cumulative4$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative4[i, 4])
+  torhigh_cumulative4$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                              intervals = int,
+                                                              partial = F)
+  torhigh_cumulative4$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torhigh_cumulative4$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative4[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F)
+}
+torhigh_cumulative4
+
+# Torulosa high block 5
+for(i in 1:nrow(torhigh_cumulative5)){
+  torhigh_cumulative5$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                   intervals = int,
+                                   partial = F)
+  torhigh_cumulative5$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative5[i, 4])
+  torhigh_cumulative5$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative5$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative5$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative5$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative5$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative5$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative5$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative5$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative5$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torhigh_cumulative5$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                          intervals = int,
+                                                          partial = F)
+  torhigh_cumulative5$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative5$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                intervals = int,
+                                                partial = F,
+                                                total.seeds = torhigh_cumulative5[i, 4])
+  torhigh_cumulative5$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                                   intervals = int,
+                                                                   partial = F,
+                                                                   total.seeds = torhigh_cumulative5[i, 4])
+  torhigh_cumulative5$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative5[i, 4])
+  torhigh_cumulative5$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                              intervals = int,
+                                                              partial = F)
+  torhigh_cumulative5$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torhigh_cumulative5$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative5[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F)
+}
+torhigh_cumulative5
+
+# Torulosa high block 6
+for(i in 1:nrow(torhigh_cumulative6)){
+  torhigh_cumulative6$t50[i] <- t50(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                   intervals = int,
+                                   partial = F)
+  torhigh_cumulative6$peak_germ_percent[i] <- PeakGermPercent(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative6[i, 4])
+  torhigh_cumulative6$germ_start[i] <- FirstGermTime(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative6$germ_finish[i] <- LastGermTime(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                    intervals = int,
+                                                    partial = F)
+  torhigh_cumulative6$timespread[i] <- TimeSpreadGerm(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative6$mean_germ_time[i] <- MeanGermTime(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative6$var_germ_time[i] <- VarGermTime(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                     intervals = int,
+                                                     partial = F)
+  torhigh_cumulative6$se_germ_time[i] <- SEGermTime(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative6$cv_germ_time[i] <- CVGermTime(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative6$mean_germ_rate[i] <- MeanGermRate(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                       intervals = int,
+                                                       partial = F)
+  torhigh_cumulative6$coefficient_velocity_germ[i] <- CVG(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                         intervals = int,
+                                                         partial = F)
+  torhigh_cumulative6$variance_germ_rate[i] <- VarGermRate(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                          intervals = int,
+                                                          partial = F)
+  torhigh_cumulative6$se_germ_rate[i] <- SEGermRate(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                   intervals = int,
+                                                   partial = F)
+  torhigh_cumulative6$germ_speed[i] <- GermSpeed(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                intervals = int,
+                                                partial = F,
+                                                total.seeds = torhigh_cumulative6[i, 4])
+  torhigh_cumulative6$weighted_germ_percent[i] <- WeightGermPercent(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                                   intervals = int,
+                                                                   partial = F,
+                                                                   total.seeds = torhigh_cumulative6[i, 4])
+  torhigh_cumulative6$mean_germ_percent[i] <- MeanGermPercent(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                             intervals = int,
+                                                             partial = F,
+                                                             total.seeds = torhigh_cumulative6[i, 4])
+  torhigh_cumulative6$coefficient_uniformity_germ[i] <- CUGerm(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                              intervals = int,
+                                                              partial = F)
+  torhigh_cumulative6$germ_synchrony[i] <- GermSynchrony(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                        intervals = int,
+                                                        partial = F)
+  torhigh_cumulative6$germ_uncertainty[i] <- GermUncertainty(germ.counts = as.numeric(torhigh_cumulative6[i, 5:65]),
+                                                            intervals = int,
+                                                            partial = F)
+}
+torhigh_cumulative6
 
 
 
+# Combine torulosa high fire blocks
+torhigh_cumulative <- rbind(torhigh_cumulative1, torhigh_cumulative2, torhigh_cumulative3, torhigh_cumulative4, torhigh_cumulative5, torhigh_cumulative6)
+head(torhigh_cumulative); tail(torhigh_cumulative); dim(torhigh_cumulative)
 
 # Make boxplots of the time to 50% germination per treatment group
 
-# Want to do two plots, top plot showing time to 50% germination and then a second plot showing the timespread of germination for each replicate and each species grouping
+# Want to do two plots, top plot showing time to 50% germination and then a second plot showing something about the speed of germination, possibly time spread but thinking germination speed would be better.
 
-dev.new(height = 20, width = 35, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(1,4,2,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(6, 0.5, 3, 0))
 
-boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Time to 50% germination")), las = 2)
+#### Littoralis
+dev.new(height = 20, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
+par(mar = c(7.5,5,2,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(2, 2, 3, 0))
+
+# Time to 50%
+boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Time to 50% germination")), ylim = c(0,20), cex.lab = 1.25, las = 2)
 title('Rep. 1', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 
-boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 2),], xaxt = "n", xlab = "", ylab = "", las = 2, ylim = c(0,20))
+boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 2),], xaxt = "n", xlab = "", ylab = "", las = 2, ylim = c(0,20), cex.lab = 1.25)
 title('Rep. 2', font.main = 1)
+mtext(expression(bolditalic(Allocasuarina~littoralis)), side = 3, line = 2)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 
-boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", las = 2, ylim = c(0,20))
+boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", las = 2, ylim = c(0,20), cex.lab = 1.25)
 title('Rep. 3', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+# Germination speed
+boxplot(germ_speed ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Germination speed")), ylim = c(0,3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+boxplot(germ_speed ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 2),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+boxplot(germ_speed ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 
 
 
 
-boxplot(timespread ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 1),], xlab = "", ylab = expression(bold("Time spread")), las = 2, ylim = c(0,20))
-title(xlab = "Treatment", line = 5)
 
-boxplot(timespread ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 2),], xlab = "", ylab = "", las = 2, ylim = c(0,20))
-title(xlab = "Treatment", line = 5)
+### Torulosa low fire
+dev.new(height = 20, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
+par(mar = c(7.5,5,2,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(2, 2, 3, 0))
 
-boxplot(timespread ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 3),], xlab = "", ylab = "", las = 2, ylim = c(0,20))
-title(xlab = "Treatment", line = 5)
+# Time to 50%
+boxplot(t50 ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Time to 50% germination")), ylim = c(0,20), cex.lab = 1.25, las = 2)
+title('Rep. 1', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 
+
+boxplot(t50 ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 2),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,20), cex.lab = 1.25, las = 2)
+mtext(expression(bolditalic(Allocasuarina~torulosa)*bold(' low fire')), side = 3, line = 2)
+title('Rep. 2', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(t50 ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,20), cex.lab = 1.25, las = 2)
+title('Rep. 3', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+
+# Germination speed
+boxplot(germ_speed ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Germination speed")), ylim = c(0, 3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+boxplot(germ_speed ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 2),],xaxt = "n", xlab = "", ylab = "", las = 2, ylim = c(0,3), cex.lab = 1.25)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+boxplot(germ_speed ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", las = 2, ylim = c(0,3), cex.lab = 1.25)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+
+
+
+
+### Torulosa high fire
+dev.new(height = 20, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
+par(mar = c(7.5,5,2,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(2, 2, 3, 0))
+
+# Time to 50%                   
+boxplot(t50 ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Time to 50% germination")), ylim = c(0,20), cex.lab = 1.25, las = 2)
+title('Rep. 1', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+boxplot(t50 ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 2),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,20), cex.lab = 1.25, las = 2)
+mtext(expression(bolditalic(Allocasuarina~torulosa)*bold(' high fire')), side = 3, line = 2)
+title('Rep. 2', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+boxplot(t50 ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,20), cex.lab = 1.25, las = 2)
+title('Rep. 3', font.main = 1)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+# Germination speed
+boxplot(germ_speed ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 1),], xaxt = "n", xlab = "", ylab = expression(bold("Germination speed")), ylim = c(0,3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(germ_speed ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 2),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
+
+
+boxplot(germ_speed ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 3),], xaxt = "n", xlab = "", ylab = "", ylim = c(0,3), cex.lab = 1.25, las = 2)
+title(xlab = expression(bold("Treatment")), line = 6.5, cex.lab = 1.25)
+axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 
 save.image('./02_Workspaces/Full_experiment_prelim_analysis.RData')
