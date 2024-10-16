@@ -1367,28 +1367,28 @@ head(torhigh_cumulative); tail(torhigh_cumulative); dim(torhigh_cumulative)
 
 #### Littoralis
 dev.new(height = 20, width = 30, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(7,5.5,1.5,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0, 1, 3, 0), cex.lab = 1.7, cex.axis = 1.5)  # Removed mtext so changed from mar = c(7,5.5,2,1) and added the line argument from title for rep labelling
+par(mar = c(9,6.5,1.75,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0, 1, 3, 0), cex.lab = 1.9, cex.axis = 1.7) # Removed mtext so changed from mar = c(7,5.5,2,1) and added the line argument from title for rep labelling
 
 # Time to 50%
 boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 1),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
-title('Rep. 1', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 1', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 title(ylab = expression(bold("Time to 50% germination")), line = 4)
 
 boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 2),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", las = 2, ylim = c(0,20), pch = 19)
-title('Rep. 2', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 2', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 
 boxplot(t50 ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 3),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", las = 2, ylim = c(0,20), pch = 19)
-title('Rep. 3', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 3', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 
 
 # Germination speed
-par(mar = c(10,5.5,2,1))
+par(mar = c(11,6.5,2,1))
 boxplot(germ_speed ~ Treatment, data = littoralis_cumulative[which(littoralis_cumulative$Rep == 1),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,3), las = 2, pch = 19)
 title(xlab = expression(bold("Treatment")), line = 9)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
@@ -1413,31 +1413,31 @@ rug(x = c(0:3 + 0.25, 0:3 + 0.75), ticksize = -0.025, side = 2)
 
 ### Torulosa low fire 
 dev.new(height = 20, width = 30, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(7,5.5,1.5,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0, 1, 3, 0), cex.lab = 1.7, cex.axis = 1.5) # Removed mtext so changed from mar = c(7,5.5,2,1) and added the line argument from title for rep labelling
+par(mar = c(9,6.5,1.75,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0, 1, 3, 0), cex.lab = 1.9, cex.axis = 1.7) # Removed mtext so changed from mar = c(7,5.5,2,1) and added the line argument from title for rep labelling
 
 # Time to 50%
 boxplot(t50 ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 1),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
-title('Rep. 1', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 1', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 title(ylab = expression(bold("Time to 50% germination")), line = 4)
 
 boxplot(t50 ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 2),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
 #mtext(expression(bolditalic(Allocasuarina~torulosa)*bold(' low fire')), side = 3, line = 2, cex = 1.7)
-title('Rep. 2', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 2', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 
 
 boxplot(t50 ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 3),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
-title('Rep. 3', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 3', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 
 
 
 # Germination speed
-par(mar = c(10,5.5,2,1))
+par(mar = c(11,6.5,2,1))
 boxplot(germ_speed ~ Treatment, data = torlow_cumulative[which(torlow_cumulative$Rep == 1),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0, 3), las = 2, pch = 19)
 title(xlab = expression(bold("Treatment")), line = 9)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
@@ -1464,31 +1464,31 @@ rug(x = c(0:3 + 0.25, 0:3 + 0.75), ticksize = -0.025, side = 2)
 
 ### Torulosa high fire
 dev.new(height = 20, width = 30, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(7,5.5,1.5,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0, 1, 3, 0), cex.lab = 1.7, cex.axis = 1.5) # Removed mtext so changed from mar = c(7,5.5,2,1) and added the line argument from title for rep labelling
+par(mar = c(9,6.5,1.75,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0, 1, 3, 0), cex.lab = 1.9, cex.axis = 1.7) # Removed mtext so changed from mar = c(7,5.5,2,1) and added the line argument from title for rep labelling
 
 # Time to 50%                   
 boxplot(t50 ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 1),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
-title('Rep. 1', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 1', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 title(ylab = expression(bold("Time to 50% germination")), line = 4)
 
 boxplot(t50 ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 2),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
 #mtext(expression(bolditalic(Allocasuarina~torulosa)*bold(' high fire')), side = 3, line = 2, cex = 1.7)
-title('Rep. 2', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 2', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 
 boxplot(t50 ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 3),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,20), las = 2, pch = 19)
-title('Rep. 3', font.main = 1, cex.main = 1.7, line = 0.5)
+title('Rep. 3', font.main = 1, cex.main = 1.9, line = 0.5)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 20, by = 2), las = 2)
 
 
 # Germination speed
-par(mar = c(10,5.5,2,1))
+par(mar = c(11,6.5,2,1))
 boxplot(germ_speed ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 1),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,3), las = 2, pch = 19)
-title(xlab = expression(bold("Treatment")), line = 9)
+title(xlab = expression(bold("Treatment")), line = 10)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 3, by = .5), las = 2)
 rug(x = c(0:3 + 0.25, 0:3 + 0.75), ticksize = -0.025, side = 2)
@@ -1496,13 +1496,13 @@ title(ylab = expression(bold("Germination speed")), line = 4)
 
 
 boxplot(germ_speed ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 2),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,3), las = 2, pch = 19)
-title(xlab = expression(bold("Treatment")), line = 9)
+title(xlab = expression(bold("Treatment")), line = 10)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 3, by = .5), las = 2)
 rug(x = c(0:3 + 0.25, 0:3 + 0.75), ticksize = -0.025, side = 2)
 
 boxplot(germ_speed ~ Treatment, data = torhigh_cumulative[which(torhigh_cumulative$Rep == 3),], xaxt = "n", xlab = "", yaxt = "n", ylab = "", ylim = c(0,3), las = 2, pch = 19)
-title(xlab = expression(bold("Treatment")), line = 9)
+title(xlab = expression(bold("Treatment")), line = 10)
 axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
 axis(side = 2, at = seq(from = 0, to = 3, by = .5), las = 2)
 rug(x = c(0:3 + 0.25, 0:3 + 0.75), ticksize = -0.025, side = 2)
