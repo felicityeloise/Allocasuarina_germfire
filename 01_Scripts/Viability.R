@@ -12,6 +12,8 @@ library(RColorBrewer)
 display.brewer.all(colorblindFriendly = T)
 RColorBrewer::brewer.pal(11, "RdYlBu")
 
+pal1 <- c("#D73027", "#FDAE61", "#4575B4")
+
 
 
 cor.test(viable$X.ray_proportion_viable[viable$Species == "littoralis"], viable$TTC_proportion_viable[viable$Species == "littoralis"])
@@ -22,34 +24,36 @@ cor.test(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Gr
 
 # Viability plots
 
-dev.new(height = 7, width = 25, dpi = 80, pointsize = 16, noRStudioGD = T)
-par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1, 3), oma = c(0,0,0,9), cex.axis = 1.2, cex.lab = 1.2, cex = 1)
+
+
+dev.new(height = 7, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
+par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1, 3), oma = c(0,0,0,9), cex.axis = 1.6, cex.lab = 1.8)
  
 plot(viable$X.ray_proportion_viable[viable$Species == "littoralis"], viable$TTC_proportion_viable[viable$Species == "littoralis"], pch = NA, xlab = expression(bold("X-ray")), ylab = expression(bold("Tetrazolium")), xlim = c(0,1), ylim = c(0,1), las = 1)
-points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], col = "#D73027", pch = 20, cex = 1.2)
-points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 1.2)
-points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 1.2)
-text(0.05, 1, labels = "Pearson's r = 0.71", adj = 0, cex = 1.2)
-text(0.18, 0.9, labels = "p < 0.001", cex = 1.2)
-title('(a)', adj = 0)
+points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
+points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 2)
+points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
+text(0.05, 1, labels = "Pearson's r = 0.71", adj = 0, cex = 1.5)
+text(0.16, 0.9, labels = "p < 0.001", cex = 1.5)
+title('(a)', adj = 0, cex = 1.75)
 
 plot(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi"], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi"], pch = NA, xlab = expression(bold("X-ray")), ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
-points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" &viable$Replicate == 1], col = "#D73027", pch = 20, cex = 1.2)
-points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 1.2)
-points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 1.2)
-text(0.05, 1, labels = "Pearson's r = 0.81", adj = 0, cex = 1.2)
-text(0.18, 0.9, labels = "p < 0.001", cex = 1.2)
-title('(b)', adj = 0)
+points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" &viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
+points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 2)
+points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
+text(0.05, 1, labels = "Pearson's r = 0.81", adj = 0, cex = 1.5)
+text(0.16, 0.9, labels = "p < 0.001", cex = 1.5)
+title('(b)', adj = 0, cex = 1.75)
 
 
 
 plot(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi"], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi"], pch = NA, xlab = expression(bold("X-ray")), ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
-points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" &viable$Replicate == 1], col = "#D73027", pch = 20, cex = 1.2)
-points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 1.2)
-points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 1.2)
-text(0.05, 1, labels = "Pearson's r = 0.61", adj = 0, cex = 1.2)
-text(0.18, 0.9, labels = "p < 0.001", cex = 1.2)
-title('(c)', adj = 0)
+points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" &viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
+points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 2)
+points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
+text(0.05, 1, labels = "Pearson's r = 0.61", adj = 0, cex = 1.5)
+text(0.16, 0.9, labels = "p < 0.001", cex = 1.5)
+title('(c)', adj = 0, cex = 1.75)
 
 par(xpd = NA)
 legend(x = 1.1, y = 0.70, legend = c("Replicate 1", "Replicate 2", "Replicate 3"), col = c("#D73027", "#FDAE61", "#4575B4"), pch = 20, title = expression(bold("Replicate")), cex = 1.5)
@@ -148,19 +152,19 @@ cor.test(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_avera
 
 
 
-
-dev.new(height = 7, width = 25, dpi = 80, pointsize = 16, noRStudioGD = T)
-par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1,3), oma = c(0,0,0, 10), cex.axis = 1.2, cex.lab = 1.2, cex = 1)
+ 
+dev.new(height = 4, width = 14, dpi = 80, pointsize = 16, noRStudioGD = T)
+par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1,3), oma = c(0,0,0, 10), cex.axis = 1.5, cex.lab = 1.5)
 
 
 
 plot(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis"], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = expression(bold("X-ray")), ylab = expression(bold("Tetrazolium")), las = 1)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#F46D43", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#A50026", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#ABD9E9", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H80+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#74ADD1", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#313695", pch = 20, cex = 1.75)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#F46D43", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#A50026", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#ABD9E9", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H80+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#74ADD1", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#313695", pch = 20, cex = 2)
 text(0.4, 0.4, labels = "Pearson's r = 0.85", adj = 0, cex = 1.2)
 text(0.4, 0.3, labels = "p < 0.001", adj = 0, cex = 1.2)
 title('(a)', adj = 0, cex = 2)
@@ -170,12 +174,12 @@ title('(a)', adj = 0, cex = 2)
 
 
 plot(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire"], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = expression(bold("X-ray")), ylab = "", las = 1)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80"], col = "#F46D43", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95"], col = "#A50026", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "S"], col = "#ABD9E9", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], col = "#74ADD1", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], col = "#313695", pch = 20, cex = 1.75)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80"], col = "#F46D43", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95"], col = "#A50026", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "S"], col = "#ABD9E9", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], col = "#74ADD1", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "low fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], col = "#313695", pch = 20, cex = 2)
 text(0.4, 0.2, labels = "Pearson's r = 0.88", adj = 0, cex = 1.2)
 text(0.4, 0.1, labels = "p < 0.001", adj = 0, cex = 1.2)
 title('(b)', adj = 0, cex = 2)
@@ -186,12 +190,12 @@ title('(b)', adj = 0, cex = 2)
 
 
 plot(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire"], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = expression(bold("X-ray")), ylab = "", las = 1)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80"], col = "#F46D43", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95"], col = "#A50026", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "S"], col = "#ABD9E9", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], col = "#74ADD1", pch = 20, cex = 1.75)
-points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], col = "#313695", pch = 20, cex = 1.75)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80"], col = "#F46D43", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95"], col = "#A50026", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "S"], col = "#ABD9E9", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H80+S"], col = "#74ADD1", pch = 20, cex = 2)
+points(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' & Treatment_viability_averages_ind$Group == "high fire" & Treatment_viability_averages_ind$Treatment == "H95+S"], col = "#313695", pch = 20, cex = 2)
 text(0.4, 0.2, labels = "Pearson's r = 0.64", adj = 0, cex = 1.2)
 text(0.4, 0.1, labels = "p < 0.001", adj = 0, cex = 1.2)
 title('(c)', adj = 0, cex = 2)
