@@ -22,16 +22,23 @@ littoralis <- rbind(lit1, lit2, lit3)
 head(littoralis); dim(littoralis)
 str(littoralis)
 littoralis$Treatment <- factor(littoralis$Treatment, levels = c("Control", "80", "95", "Smoke", "80+smoke", "95+smoke"))
+littoralis$Group <- "NA"
 str(littoralis)
+littoralis <- littoralis[, c(3, 73, 1, 2, 4:ncol(littoralis)-1)]
+littoralis <- littoralis[, c(1:4, 6:ncol(littoralis))]
 head(littoralis); dim(littoralis)
 unique(littoralis$Treatment)
-
 
 torlow1 <- read.csv('./00_Data/Full_experiment/Set1/torlow1.csv', header = T, stringsAsFactors = T)
 torlow2 <- read.csv('./00_Data/Full_experiment/Set2/torlow2.csv', header = T, stringsAsFactors = T)
 torlow3 <- read.csv('./00_Data/Full_experiment/Set3/torlow3.csv', header = T, stringsAsFactors = T)
 torlow <- rbind(torlow1, torlow2, torlow3)
 head(torlow); dim(torlow)
+torlow$Species <- "torulosa"
+torlow$Group <- "lowfi"
+torlow <- torlow[, c(3, 73, 1, 2, 4:ncol(torlow)-1)]
+head(torlow); dim(torlow)
+torlow <- torlow[, c(1:4, 6:ncol(torlow))]
 str(torlow)
 torlow$Treatment <- factor(torlow$Treatment, levels = c("Control", "80", "95", "Smoke", "80+smoke", "95+smoke"))
 unique(torlow$Treatment)
