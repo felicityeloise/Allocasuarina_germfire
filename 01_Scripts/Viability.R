@@ -27,7 +27,7 @@ cor.test(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Gr
 
 
 dev.new(height = 7, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1, 3), oma = c(0,0,0,9), cex.axis = 1.6, cex.lab = 1.8)
+par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1, 3), oma = c(0,0,0,9), cex.axis = 1.6, cex.lab = 1.8, cex.main = 2)
  
 plot(viable$X.ray_proportion_viable[viable$Species == "littoralis"], viable$TTC_proportion_viable[viable$Species == "littoralis"], pch = NA, xlab = expression(bold("X-ray")), ylab = expression(bold("Tetrazolium")), xlim = c(0,1), ylim = c(0,1), las = 1)
 points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
@@ -35,7 +35,7 @@ points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Re
 points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
 text(0.05, 1, labels = "Pearson's r = 0.71", adj = 0, cex = 1.5)
 text(0.16, 0.9, labels = "p < 0.001", cex = 1.5)
-title('(a)', adj = 0, cex = 1.75)
+title('(a)', adj = 0, cex = 3)
 
 plot(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi"], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi"], pch = NA, xlab = expression(bold("X-ray")), ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" &viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
@@ -43,7 +43,7 @@ points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Grou
 points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "lowfi" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
 text(0.05, 1, labels = "Pearson's r = 0.81", adj = 0, cex = 1.5)
 text(0.16, 0.9, labels = "p < 0.001", cex = 1.5)
-title('(b)', adj = 0, cex = 1.75)
+title('(b)', adj = 0, cex = 3)
 
 
 
@@ -53,7 +53,7 @@ points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Grou
 points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Group == "hifi" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
 text(0.05, 1, labels = "Pearson's r = 0.61", adj = 0, cex = 1.5)
 text(0.16, 0.9, labels = "p < 0.001", cex = 1.5)
-title('(c)', adj = 0, cex = 1.75)
+title('(c)', adj = 0, cex = 3)
 
 par(xpd = NA)
 legend(x = 1.1, y = 0.70, legend = c("Replicate 1", "Replicate 2", "Replicate 3"), col = c("#D73027", "#FDAE61", "#4575B4"), pch = 20, title = expression(bold("Replicate")), cex = 1.5)
@@ -154,7 +154,7 @@ cor.test(Treatment_viability_averages_ind$mean_TTC_via[Treatment_viability_avera
 
  
 dev.new(height = 4, width = 14, dpi = 80, pointsize = 16, noRStudioGD = T)
-par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1,3), oma = c(0,0,0, 10), cex.axis = 1.5, cex.lab = 1.5)
+par(mar = c(5,5,2,3), mgp = c(3,1,0), mfrow = c(1,3), oma = c(0,0,0, 10), cex.axis = 1.5, cex.lab = 1.5, cex.main = 2)
 
 
 
