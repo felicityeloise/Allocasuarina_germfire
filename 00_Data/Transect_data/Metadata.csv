@@ -1,0 +1,10 @@
+Transect trees metadata
+"Fo trees with multiple stems, height and DBH are recorded from the tallest alive stem "
+Average and variation of height and DBH include all stems including those that are dead. 
+For tree level data latitude and longitude was added based on the beginning of every 10m section. 
+Multi-stemmed is a binary variable to indication 0 = single stem or  1 = multi-stemmed
+"Cone counts which were recorded as > x, had '>' removed"
+
+Transects locations metadata
+Average cones was calcualted as the total number of cones on that transect/number of individuals with cones and rounded to 0 decimal places as cones must be a whole
+"Cone counts which were recorded as > x, had '>' removed prior to calculating averages"
