@@ -18,150 +18,142 @@ library(cowplot)
 sf::sf_use_s2(FALSE)
 
 # 2. Read and format sample data ----
-sdat <- read.csv('./00_Data/Sample_information.csv', header  = T, stringsAsFactors = T)
+sdat <- read.csv('./00_Data/Transect_location_data.csv', header  = T, stringsAsFactors = T)
 head(sdat)
-sdat <- na.omit(sdat) # Remove any samples with NA as they were not included in the experiment
-dim(sdat) # 114 rows
-sdat <- sdat[-which(sdat$Number_of_seeds_estimate_from_weight <60),]
-dim(sdat)
-sdat <- sdat[, c(1:5,9,10)]
-head(sdat); dim(sdat)
+sdat <- sdat[-6,]
+sdat <- droplevels(sdat)
+transect <- read.csv('./00_Data/Transect_location_data.csv', header = T, stringsAsFactors = T)
+transect <- transect[-6,]
+transect <- droplevels(transect)
+str(transect)
+
+
 
 # Convert this to a spatial features dataframe so we can plot this on a map
 sdat_sf <- st_as_sf(sdat, coords = c('Longitude', 'Latitude'), crs = 'EPSG:4326')
 head(sdat_sf)
-
 # Convert to a SpatVetor and change the projection
 sdat_r <- vect(sdat_sf) %>% 
   project('EPSG:3577') 
+
+transect_sf <- st_as_sf(transect, coords = c('Longitude', 'Latitude'), crs = 'EPSG:4326')
+transect_r <- vect(transect_sf) %>% 
+  project('EPSG:3577')
+
+
 
 # Check how this looks
 sdat_r
 plet(sdat_r)
 
 # 3. Read and format environmental spatial data ----
-# Before reading the data in, create an extent object that captures the study area
-e <- ext(1937184, 2019240, -3241075, -3126720)
-protected_areas <- vect('E:/ADATA/QLD/QLD_Protected_areas/QSC_Extracted_Data_20220221_143858585000-64332/Protected_areas.shp') %>% 
+# Create new extent for the study area
+e <- ext(1936841, 2086019, -3241253, -3105183)
+
+
+
+protected_areas <- vect('D:/ADATA/QLD/QLD_Protected_areas/QSC_Extracted_Data_20220221_143858585000-64332/Protected_areas.shp') %>% 
   project('EPSG:3577') %>% 
   crop(e)
 
 # Download nature refuge files from internet and unzip
-Bulimbah <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-bulimbah-nature-refuge.kmz", destfile = './00_Data/Spatial data/Bulimbah_nature_refuge.kmz', mode = "wb", cacheOK = F)
-unzip(zipfile = './00_Data/Spatial data/Bulimbah_nature_refuge.kmz', exdir = './00_Data/Spatial data/')
+Bulimbah <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-bulimbah-nature-refuge.kmz", destfile = './00_Data/Spatial_data/Nature_refuges/Bulimbah_nature_refuge.kmz', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial_data/Nature_refuges/Bulimbah_nature_refuge.kmz', exdir = './00_Data/Spatial_data/Nature_refuges')
 
-Gillies <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-gillies-ridge-nature-refuge.kmz", destfile = './00_Data/Spatial data/Gillies_nature_refuge.kmz', mode = "wb", cacheOK = F)
-unzip(zipfile = './00_Data/Spatial data/Gillies_nature_refuge.kmz', exdir = './00_Data/Spatial data/')
+Gillies <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-gillies-ridge-nature-refuge.kmz", destfile = './00_Data/Spatial_data/Nature_refuges/Gillies_nature_refuge.kmz', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial_data/Nature_refuges/Gillies_nature_refuge.kmz', exdir = './00_Data/Spatial_data/Nature_refuges')
 
-Bartopia <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-bartopia-nature-refuge.kmz", destfile = './00_Data/Spatial data/Bartopia.kmz', mode = "wb", cacheOK = F)
-unzip(zipfile = './00_Data/Spatial data/Bartopia.kmz', exdir = './00_Data/Spatial data/')
+Bartopia <- download.file("https://wetlandinfo.des.qld.gov.au/resources/wetland-summary/area/nature-refuge/kml/nature-refuge-bartopia-nature-refuge.kmz", destfile = './00_Data/Spatial_data/Nature_refuges/Bartopia.kmz', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial_data/Nature_refuges/Bartopia.kmz', exdir = './00_Data/Spatial_data/Nature_refuges/')
 
+unzip(zipfile = './00_Data/Spatial_data/Nature_refuges/Entire_OHV_perimeter.kmz', exdir='./00_Data/Spatial_data/Nature_refuges/') # Note: this needs to be renamed
 
 # Read in nature refuge files
-HV <- vect('./00_Data/Spatial data/OHV_perimeter.kml') %>% 
+HV <- vect('./00_Data/Spatial_data/Nature_refuges/doc.kml') %>% 
   project('EPSG:3577')
-Gillies <- vect('./00_Data/Spatial data/nature-refuge-gillies-ridge-nature-refuge.kml') %>% 
+Gillies <- vect('./00_Data/Spatial_data/Nature_refuges/nature-refuge-gillies-ridge-nature-refuge.kml') %>% 
   project('EPSG:3577')
-Bulimbah <- vect('./00_Data/Spatial data/nature-refuge-bulimbah-nature-refuge.kml') %>% 
+Bulimbah <- vect('./00_Data/Spatial_data/Nature_refuges/nature-refuge-bulimbah-nature-refuge.kml') %>% 
   project('EPSG:3577')
-Bartopia <- vect('./00_Data/Spatial data/nature-refuge-bartopia-nature-refuge.kml') %>% 
+Bartopia <- vect('./00_Data/Spatial_data/Nature_refuges/nature-refuge-bartopia-nature-refuge.kml') %>% 
   project('EPSG:3577')
 
-# 4. Calculate fire frequency for QPWS estates ----
-# These steps have already been run in a different project. Code for producing this file is copied below but we will just read in the final output.
-#QPWS_fire_hist <- vect('E:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/QPWS_fire_history/Fire_history___QPWS.shp') %>% 
-#project('EPSG:3577')
-# Subset the fire history data 
-# Keep only the data from 1987 - 2023
-#QPWS_fire_hist_1987 <- subset(QPWS_fire_hist, QPWS_fire_hist$OUTYEAR >= 1987 & QPWS_fire_hist$OUTYEAR <2024)
-#unique(QPWS_fire_hist_1987$OUTYEAR) # Check that this has worked
-
-# Convert to raster and calculate fire frequency
-# Fasterize only works with data in sf format so convert the data frame
-#QPWS_fire <- st_as_sf(QPWS_fire_hist_1987)
-#rtemp <- raster::raster(xmn = 1902033, xmx = 2111776, ymn = -3257627, ymx = -2954985, res = 5, crs = 'EPSG:3577')
-#QPWS_SEQ_freq_rast <- fasterize::fasterize(QPWS_fire, rtemp, field = 'OUTYEAR', fun = 'count')
-
-
-# Before reading the data in, create an extent object that captures the study area
-QPWS_fire <- rast('E:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/SEQ/QPWS_SEQ_freq_raster.tif') %>% 
+# 4. Read in fire frequency data for QPWS estates  ----
+QPWS_fire <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/SEQ/QPWS_SEQ_freq_hydrographical_mask_cropped_reproj.tif') %>% 
   crop(e)
 plet(QPWS_fire)
 
+# 5. Read in modelled satellite fire frequency for outside QPWS estates ----
+# This data was produced as part of a different project, refer to https://github.com/felicityeloise/Fire_freq_pred_modelling.git
+mod_satellite_fire <- rast('D:/PhD/R_analysis/Fire_freq/04_Results/Prediction_rasters/GAM_pred.tif') %>% 
+  crop(e)
+plet(mod_satellite_fire)
 
 
-
-# 5. Categorise the individuals by their fire frequency
-sdat$ID <- 1:nrow(sdat)
-
-# Extract the fire frequency for each sample
-samp_fire <- extract(QPWS_fire, sdat_r)
-sdat2 <- merge(sdat, samp_fire, by = "ID")
-sdat2$fire_cat <- ifelse(sdat2$QPWS_SEQ_freq_raster >=4, "high", "low")
-unique(sdat2$fire_cat)
-sdat2$fire_cat <- ifelse(is.na(sdat2$fire_cat), "low", sdat2$fire_cat)
-unique(sdat2$fire_cat)
-head(sdat2);dim(sdat2)
-sdat2$fire_cat <- paste0(sdat2$fire_cat, sdat2$Species)
-sdat2$fire_cat <- ifelse(sdat2$fire_cat == "highlittoralis" | sdat2$fire_cat == "lowlittoralis", "littoralis", sdat2$fire_cat)
-unique(sdat2$fire_cat)
-head(sdat2); tail(sdat2); dim(sdat2)
-str(sdat2)
-sdat2$fire_cat <- plyr::revalue(sdat2$fire_cat, c("littoralis" = "Allocasuarina littoralis", "lowtorulosa" = "Low Allocasuarina torulosa", "hightorulosa" = "High Allocasuarina torulosa"))
-head(sdat2); tail(sdat2); dim(sdat2)
-
-# Convert this back to spatial data
-sdat_r2 <- st_as_sf(sdat2, coords = c('Longitude', 'Latitude'), crs = 'EPSG:4326')
-head(sdat_r2)
-
-# Convert to a SpatVetor and change the projection
-sdat_r2 <- vect(sdat_r2) %>% 
-  project('EPSG:3577') 
-
-# 6. Produce map ----
-
-p1 <- ggplot() + 
-  geom_spatraster(data = QPWS_fire) +
-  theme_minimal()+
-  scale_fill_continuous(na.value = "transparent", breaks = c(1,11),low = "#FFF5F0", high = "darkred")+  #Note we can change na.value to be "white", this would allow us to put any 0s as NAs and easily show these areas as white
-  geom_spatvector(data = protected_areas, fill = NA, colour = "#4D60A9") +
-  geom_spatvector(data = Gillies, fill = NA, colour = '#4D50A9') +
-  geom_spatvector(data = HV, fill = NA, colour = '#4D50A9')+
-  geom_spatvector(data = Bartopia, fill = NA, colour = '#4D50A9')+
-  geom_spatvector(data = Bulimbah, fill = NA, colour = '#4D50A9')+
-  geom_spatvector(data = sdat_r2, aes(col = fire_cat, shape = fire_cat), size = 2)+
-  scale_shape_manual(values = c(19, 17, 17)) +
-  scale_color_manual(values = c("mediumblue",  "steelblue4", "dodgerblue2"))+
-  labs(shape = "Species fire category", color = "Species fire category", fill = "Fire frequency")+
-  guides(color = guide_legend(override.aes = list(size = 3)))+
-  annotation_north_arrow(location = "bl", which_north = T, height = unit(1, "cm"), width = unit(0.75, "cm"), pad_y = unit(0.5, "cm"), style = north_arrow_fancy_orienteering) +
-  annotation_scale(location = "bl")+
-  theme(legend.text = element_text(size = rel(0.9)))
+mod_satellite_fire <- mask(mod_satellite_fire, QPWS_fire, inverse = T)
+plet(mod_satellite_fire)
 
 
-# Create the inset map
-# Read in the data required for the inset ----
-Aus <- download.file("https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files/STE_2021_AUST_SHP_GDA2020.zip", destfile = './00_Data/Spatial data/Australia.zip', mode = "wb", cacheOK = F)
-unzip(zipfile = './00_Data/Spatial data/Australia.zip', exdir = './00_Data/Spatial data/Australia')
-QLD <- vect('./00_Data/Spatial data/Australia/STE_2021_AUST_GDA2020.shp') %>%
+# 6. Read in the data required for the inset ----
+Aus <- download.file("https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files/STE_2021_AUST_SHP_GDA2020.zip", destfile = './00_Data/Spatial_data/Australia.zip', mode = "wb", cacheOK = F)
+unzip(zipfile = './00_Data/Spatial_data/Australia.zip', exdir = './00_Data/Spatial_data/Australia')
+Australia <- vect('./00_Data/Spatial_data/Australia/STE_2021_AUST_GDA2020.shp') %>%
   project("EPSG:3577")
-QLD <- subset(QLD, QLD$STE_NAME21 == "Queensland")
+QLD <- subset(Australia, Australia$STE_NAME21 == "Queensland")
+coast <- crop(QLD, e)
 
 
-inset <- ggplot()+
-  geom_spatvector(data = QLD, fill = NA)+
+# 7. Produce map ----
+
+p1 <- 
+ggplot() + 
+  geom_spatvector(data = coast, col = "black", fill = 'transparent')+
   geom_spatraster(data = QPWS_fire) +
-  scale_fill_continuous(na.value = "transparent", breaks = c(1,11),low = "#FFF5F0", high = "darkred")+
+  scale_fill_continuous(na.value = "transparent", limits = c(1,11), breaks = seq(1,11),low = "#FFF5F0", high = "darkred")+
+  geom_spatraster(data = mod_satellite_fire) +
+  theme_minimal() +
+  theme_cowplot(font_size = 17) +
+  labs(fill = expression(bold("Fire frequency")), col = expression(bold("Species")), shape = expression(bold("Species"))) +
+  annotation_north_arrow(location = "bl", which_north = T, height = unit(1.5, "cm"), width = unit(1.25, "cm"), pad_y = unit(0.2, "cm"),pad_x = unit(21, 'cm'), style = north_arrow_fancy_orienteering) +
+  annotation_scale(location = "bl", pad_x = unit(13, "cm"), text_cex = 1.25)+
+  theme(legend.text = element_text(size = rel(0.9)),
+        legend.key.height = unit(1.2, "cm"),
+        legend.title = element_text(size = rel(1)),
+        legend.justification = "bottom")+
+  geom_spatvector(data = protected_areas, fill = NA, colour = "black") +
+  geom_spatvector(data = Gillies, fill = NA, colour = 'black') +
+  geom_spatvector(data = HV, fill = NA, colour = 'black')+
+  geom_spatvector(data = Bartopia, fill = NA, colour = 'black')+
+  geom_spatvector(data = Bulimbah, fill = NA, colour = 'black')+
+  geom_spatvector(data = transect_r, aes(col = Species, shape = Species), size = 2.2) +
+  scale_shape_manual(values = c(16,18), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa")))) +
+  scale_colour_manual(values = c("deepskyblue3", "steelblue4"), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))))+
+  guides(color = guide_legend(override.aes = list(size = 4)))
+
+
+    
+
+# 8. Create the inset map
+inset <-
+  ggplot()+
+  geom_spatvector(data = Australia, fill = NA)+
+  geom_spatraster(data = QPWS_fire) +
+  geom_spatraster(data = mod_satellite_fire) +
+  scale_fill_continuous(na.value = "transparent", breaks = c(1,11),low = "darkred", high = "darkred")+
   theme_void() +
   theme(legend.position = "none") +
-  geom_rect(aes(xmin = 1935620, xmax = 2021296, ymin = -3241847, ymax = -3126599), alpha = 0, colour = "black")+
-  annotation_scale(location = "bl")
+  geom_rect(aes(xmin = e[1], xmax = e[2], ymin = e[3], ymax = e[4]), alpha = 0, colour = "black")+
+  annotation_scale(location = "bl", text_cex = 1, pad_y = unit(1, "cm"), pad_x = unit(5, 'cm'))
 
 
 
 sample_plot <- ggdraw()+
   draw_plot(p1)+
-  draw_plot(inset, x = 0.7, y = 0.7, width = 0.25, height = 0.25)
+  draw_plot(inset, x = 0.6, y = 0.55, width = 0.5, height = 0.5)
+sample_plot
+
+
 
 
 ggsave("./03_Results/Sample_map.pdf", sample_plot, width = 10, height = 10)
+ggsave('./03_Results/Sample_map.jpg', sample_plot, width = 10, height = 10)
