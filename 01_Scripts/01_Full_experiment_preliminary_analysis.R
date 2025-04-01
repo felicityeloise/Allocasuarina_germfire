@@ -8,7 +8,6 @@
 #1. Load packages
 # Having a problem with this germinationmetrics::germination.indices(). A warning message was updated but does not seem to be showing the update message when I run the function. Cannot install from github.
 
-library(germinationmetrics)
 library(dplyr)
 
 
@@ -123,7 +122,6 @@ for(i in 1:nrow(dat_cumulative)){
  dat_cumulative$firstgerm[i] <- int[min(which(dat_cumulative[i, 13:73] != 0))]
  dat_cumulative$lastgerm[i] <- int[min(which(dat_cumulative[i, 13:73] == dat_cumulative$Total_germination))]
  dat_cumulative$timespread[i] <-  int[min(which(dat_cumulative[i, 13:73] == dat_cumulative$Total_germination))] - int[min(which(dat_cumulative[i, 13:73] != 0))]
- dat_cumulative$germspeed[i] <- sum((dat_cumulative[i, 13:73]/dat_cumulative$Total_seeds)/int)
  dat_cumulative[is.na(dat_cumulative)] <- 0
 } 
 
@@ -131,7 +129,7 @@ head(dat_cumulative); tail(dat_cumulative); dim(dat_cumulative)
 
 str(dat_cumulative)
 
-# Create plots for time to 50% germination and germination speed 
+# Create plots for time to 50% germination
 
 dev.new(height = 12, width = 30, dpi = 80, pointsize = 14, noRStudioGD = T)
 par(mar = c(14,7,3,1), mgp = c(3,1,0), mfrow = c(1,3), oma = c(0, 0, 0, 0), cex.lab = 3, cex.axis = 2.5, cex.main = 3)
@@ -162,37 +160,6 @@ axis(side = 2, at = seq(from = 0, to = 30, by = 2), las = 1)
 title(xlab = expression(bold("Treatment")), line = 13, adj = 0.45)
 
 
-
-
-
-###### GERMINATION SPEED
-dev.new(height = 12, width = 30, dpi = 80, pointsize = 14, noRStudioGD = T)
-par(mar = c(14,7,3,1), mgp = c(3,1,0), mfrow = c(1,3), oma = c(0, 0, 0, 0), cex.lab = 3, cex.axis = 2.5, cex.main = 3)
-
-
-### Littoralis
-boxplot(germspeed ~ Treatment, data = dat_cumulative[dat_cumulative$Species == "littoralis",], xaxt = "n", xlab = "", ylab = "", ylim = c(0, 2.5), las = 1, pch = 19, cex = 1.5)
-title('(a)', adj = 0, line = 0.5)
-title(xlab = expression(bold("Treatment")), line = 12, adj = 0.45)
-axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
-title(ylab = expression(bold("Germination speed")), line = 4)
-rug(x = c(0:2.5 + 0.25, 0:2.5 + 0.75), ticksize = -0.025, side = 2)
-
-
-### Torulosa low fire
-boxplot(germspeed ~ Treatment, data = dat_cumulative[dat_cumulative$Species == "torulosa" & dat_cumulative$Group == "lowfi",], xaxt = "n", xlab = "", ylab = "", ylim = c(0, 2.5), las = 1, pch = 19, cex = 1.5)
-title('(b)', adj = 0, line = 0.5)
-title(xlab = expression(bold("Treatment")), line = 12, adj = 0.45)
-axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
-rug(x = c(0:2.5 + 0.25, 0:2.5 + 0.75), ticksize = -0.025, side = 2)
-
-
-### Torulosa high fire
-boxplot(germspeed ~ Treatment, data = dat_cumulative[dat_cumulative$Species == "torulosa" & dat_cumulative$Group == "hifi",], xaxt = "n", xlab = "", ylab = "", ylim = c(0, 2.5), las = 1, pch = 19, cex = 1.5)
-title('(c)', adj = 0, line = 0.5)
-title(xlab = expression(bold("Treatment")), line = 12, adj = 0.45)
-axis(side = 1, at = c(1,2,3,4,5,6), labels = c("Control", "80°C", "95°C", "Smoke", "80°C+smoke", "95°C+smoke"), las = 2)
-rug(x = c(0:2.5 + 2.5, 0:2.5 + 0.75), ticksize = -0.025, side = 2)
 
 
 save.image('./02_Workspaces/Full_experiment_prelim_analysis.RData')
