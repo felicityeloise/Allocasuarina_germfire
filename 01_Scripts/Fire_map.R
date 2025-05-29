@@ -18,14 +18,11 @@ library(cowplot)
 sf::sf_use_s2(FALSE)
 
 # 2. Read and format sample data ----
-sdat <- read.csv('./00_Data/Transect_location_data.csv', header  = T, stringsAsFactors = T)
+sdat <- read.csv('./00_Data/Transect_data/Transect_location_data.csv', header  = T, stringsAsFactors = T)
 head(sdat)
 sdat <- sdat[-6,]
 sdat <- droplevels(sdat)
-transect <- read.csv('./00_Data/Transect_location_data.csv', header = T, stringsAsFactors = T)
-transect <- transect[-6,]
-transect <- droplevels(transect)
-str(transect)
+str(sdat)
 
 
 
@@ -35,10 +32,6 @@ head(sdat_sf)
 # Convert to a SpatVetor and change the projection
 sdat_r <- vect(sdat_sf) %>% 
   project('EPSG:3577') 
-
-transect_sf <- st_as_sf(transect, coords = c('Longitude', 'Latitude'), crs = 'EPSG:4326')
-transect_r <- vect(transect_sf) %>% 
-  project('EPSG:3577')
 
 
 
@@ -109,15 +102,15 @@ p1 <-
 ggplot() + 
   geom_spatvector(data = coast, col = "black", fill = 'transparent')+
   geom_spatraster(data = QPWS_fire) +
-  scale_fill_continuous(na.value = "transparent", limits = c(1,11), breaks = seq(1,11),low = "#FFF5F0", high = "darkred")+
+  scale_fill_continuous(na.value = "transparent", limits = c(1,13), breaks = seq(1,13,1), low = "#FFF5F0", high = "darkred")+
   geom_spatraster(data = mod_satellite_fire) +
   theme_minimal() +
-  theme_cowplot(font_size = 17) +
+  theme_cowplot(font_size = 20) +
   labs(fill = expression(bold("Fire frequency")), col = expression(bold("Species")), shape = expression(bold("Species"))) +
-  annotation_north_arrow(location = "bl", which_north = T, height = unit(1.5, "cm"), width = unit(1.25, "cm"), pad_y = unit(0.2, "cm"),pad_x = unit(21, 'cm'), style = north_arrow_fancy_orienteering) +
-  annotation_scale(location = "bl", pad_x = unit(13, "cm"), text_cex = 1.25)+
+  annotation_north_arrow(location = "bl", which_north = T, height = unit(1.5, "cm"), width = unit(1.25, "cm"), pad_y = unit(0.2, "cm"),pad_x = unit(23, 'cm'), style = north_arrow_fancy_orienteering) +
+  annotation_scale(location = "bl", pad_x = unit(14, "cm"), text_cex = 1.25)+
   theme(legend.text = element_text(size = rel(0.9)),
-        legend.key.height = unit(1.2, "cm"),
+        legend.key.height = unit(1.5, "cm"),
         legend.title = element_text(size = rel(1)),
         legend.justification = "bottom")+
   geom_spatvector(data = protected_areas, fill = NA, colour = "black") +
@@ -125,9 +118,9 @@ ggplot() +
   geom_spatvector(data = HV, fill = NA, colour = 'black')+
   geom_spatvector(data = Bartopia, fill = NA, colour = 'black')+
   geom_spatvector(data = Bulimbah, fill = NA, colour = 'black')+
-  geom_spatvector(data = transect_r, aes(col = Species, shape = Species), size = 2.2) +
+  geom_spatvector(data = sdat_r, aes(col = Species, shape = Species), size = 4) +
   scale_shape_manual(values = c(16,18), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa")))) +
-  scale_colour_manual(values = c("deepskyblue3", "steelblue4"), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))))+
+  scale_colour_manual(values = c("slateblue", "steelblue4"), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))))+
   guides(color = guide_legend(override.aes = list(size = 4)))
 
 
@@ -139,21 +132,21 @@ inset <-
   geom_spatvector(data = Australia, fill = NA)+
   geom_spatraster(data = QPWS_fire) +
   geom_spatraster(data = mod_satellite_fire) +
-  scale_fill_continuous(na.value = "transparent", breaks = c(1,11),low = "darkred", high = "darkred")+
+  scale_fill_continuous(na.value = "transparent", breaks = c(1,13),low = "darkred", high = "darkred")+
   theme_void() +
   theme(legend.position = "none") +
   geom_rect(aes(xmin = e[1], xmax = e[2], ymin = e[3], ymax = e[4]), alpha = 0, colour = "black")+
-  annotation_scale(location = "bl", text_cex = 1, pad_y = unit(1, "cm"), pad_x = unit(5, 'cm'))
+  annotation_scale(location = "bl", text_cex = 1, pad_y = unit(2.6, "cm"), pad_x = unit(6, 'cm'))
 
 
 
 sample_plot <- ggdraw()+
   draw_plot(p1)+
-  draw_plot(inset, x = 0.6, y = 0.55, width = 0.5, height = 0.5)
+  draw_plot(inset, x = 0.55, y = 0.5, width = 0.6, height = 0.5)
 sample_plot
 
 
 
 
-ggsave("./03_Results/Sample_map.pdf", sample_plot, width = 10, height = 10)
-ggsave('./03_Results/Sample_map.jpg', sample_plot, width = 10, height = 10)
+#ggsave("./03_Results/Sample_map.pdf", sample_plot, width = 10, height = 10)
+ggsave('./03_Results/Sample_map.png', sample_plot, width = 19, height = 10)

@@ -7,7 +7,7 @@
 
 #1. Load packages ----
 # Having a problem with this germinationmetrics::germination.indices(). A warning message was updated but does not seem to be showing the update message when I run the function. Cannot install from github.
-
+    
 library(dplyr)
 library(terra)
 library(sf)
@@ -15,9 +15,9 @@ library(gdalUtilities)
 
 
 # 2. Read in data and combine by species grouping ----
-lit1 <- read.csv('./00_Data/Full_experiment/Set1/Littoralis1.csv', header = T, stringsAsFactors = T, )
-lit2 <- read.csv('./00_Data/Full_experiment/Set2/littoralis2.csv', header = T, stringsAsFactors = T)
-lit3 <- read.csv('./00_Data/Full_experiment/Set3/littoralis3.csv', header = T, stringsAsFactors = T)
+lit1 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set1/Littoralis1.csv', header = T, stringsAsFactors = T, )
+lit2 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set2/littoralis2.csv', header = T, stringsAsFactors = T)
+lit3 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set3/littoralis3.csv', header = T, stringsAsFactors = T)
 littoralis <- rbind(lit1, lit2, lit3)
 head(littoralis); dim(littoralis)
 str(littoralis)
@@ -29,9 +29,9 @@ littoralis <- littoralis[, c(1:4, 6:ncol(littoralis))]
 head(littoralis); dim(littoralis)
 unique(littoralis$Treatment)
 
-torlow1 <- read.csv('./00_Data/Full_experiment/Set1/torlow1.csv', header = T, stringsAsFactors = T)
-torlow2 <- read.csv('./00_Data/Full_experiment/Set2/torlow2.csv', header = T, stringsAsFactors = T)
-torlow3 <- read.csv('./00_Data/Full_experiment/Set3/torlow3.csv', header = T, stringsAsFactors = T)
+torlow1 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set1/torlow1.csv', header = T, stringsAsFactors = T)
+torlow2 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set2/torlow2.csv', header = T, stringsAsFactors = T)
+torlow3 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set3/torlow3.csv', header = T, stringsAsFactors = T)
 torlow <- rbind(torlow1, torlow2, torlow3)
 head(torlow); dim(torlow)
 torlow$Species <- "torulosa"
@@ -44,9 +44,9 @@ torlow$Treatment <- factor(torlow$Treatment, levels = c("Control", "80", "95", "
 unique(torlow$Treatment)
 
 
-torhigh1 <- read.csv('./00_Data/Full_experiment/Set1/torhigh1.csv', header = T, stringsAsFactors = T)
-torhigh2 <- read.csv('./00_Data/Full_experiment/Set2/torhigh2.csv', header = T, stringsAsFactors = T)
-torhigh3 <- read.csv('./00_Data/Full_experiment/Set3/torhigh3.csv', header = T, stringsAsFactors = T)
+torhigh1 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set1/torhigh1.csv', header = T, stringsAsFactors = T)
+torhigh2 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set2/torhigh2.csv', header = T, stringsAsFactors = T)
+torhigh3 <- read.csv('./00_Data/Seeds_data/Full_experiment/Set3/torhigh3.csv', header = T, stringsAsFactors = T)
 torhigh <- rbind(torhigh1, torhigh2, torhigh3)
 head(torhigh); dim(torhigh)
 torhigh$Species <- "torulosa"
@@ -350,38 +350,6 @@ unique(is.na(seed_charact_s))
 
 
 
-# 5.6 Produce histograms to investigate time since fire ----
-tor_tran_TSF <- hist(transects_fire$TSF[transects_fire$Species == "torulosa"], breaks = seq(-1,37,1), main = "torulosa", las = 1, xlab = "Fire_frequency")
-lit_tran_TSF <- hist(transects_fire$TSF[transects_fire$Species == "littoralis"], breaks = seq(-1,37,1), main= "littoralis", las = 1, xlab = "Fire frequency")
-
-tor_germ_TSF <- hist(dat_cum.prop$TSF[dat_cum.prop$Species == "torulosa"], breaks = seq(-1,37,1), main = "torulosa", las = 1, xlab = "Fire frequency")
-lit_germ_TSF <- hist(dat_cum.prop$TSF[dat_cum.prop$Species == "littoralis"], breaks = seq(-1,37,1), main = "littoralis", las = 1, xlab = "Fire frequency")
-
-
-
-
-# Then we want to look at boxplots of germination rates and seed size
-lit <- seed_charact[seed_charact$Species == "littoralis", ]
-tor <- seed_charact[seed_charact$Species == "torulosa", ]
-
-# Seed weight
-hist(lit$seed_weight)
-hist(tor$seed_weight)
-
-
-# Germination rate - time to 50% germination
-
-germ_lit <- dat_cum.prop[dat_cum.prop$Species == "littoralis", ]
-germ_tor <- dat_cum.prop[dat_cum.prop$Species == "torulosa", ]
-
-hist(germ_lit$t50)
-hist(germ_tor$t50)
-
-hist(germ_lit$Proportion_germ)
-hist(germ_tor$Proportion_germ)
-
-
-
 # 6. Calculate proportion of seedlings to adults, saplings to adults, and seedlings+saplings to adults for transect data -----
 transects_fire$Proportion_seedlings <- transects_fire$Number_seedlings/(transects_fire$Number_seedlings + transects_fire$Number_mature)
 transects_fire$Proportion_saplings <- transects_fire$Number_saplings/(transects_fire$Number_saplings + transects_fire$Number_mature)
@@ -607,6 +575,28 @@ head(transects_fire)
 head(transect_v)
 head(seed_charact_s)
 
+# Topographic wetness index
+TWI <- rast("/vsicurl/https://s3.data.csiro.au/dapprd/000005588v002/data/TopographicWetnessIndex_1_arcsecond_resolution/mosaic/twi_1s.tif?response-content-disposition=attachment%3B%20filename%3D%22twi_1s.tif%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250407T033851Z&X-Amz-SignedHeaders=host&X-Amz-Expires=172800&X-Amz-Credential=LZXJN5QGAFIUYRYFTEAP%2F20250407%2FCDC%2Fs3%2Faws4_request&X-Amz-Signature=eacd8e68095b25b851763865fc9dd4792d6f4074293b2e42623165cc50ae9309") # To get this link need to click download on the file from https://data.csiro.au/collection/csiro:5588 and then as it is downloading open up the downloads drop down > right click on the file > copy download link. Need to get a new link each time this line is run otherwise it will not work.
+
+writeRaster(TWI, "./00_Data/Spatial_data/Environmental_data/TWI/TWI.tif")
+
+gdalwarp(srcfile = './00_Data/Spatial_data/Environmental_data/TWI/TWI.tif', # Source file
+         dstfile = './00_Data/Spatial_data/Environmental_data/TWI/TWI.tif', # Destination file
+         t_srs = 'EPSG:3577', # CRS to be transformed to  
+         tr = c(30,30)) # Resolution to be transformed to
+
+TWI <- rast('./00_Data/Spatial_data/Environmental_data/TWI/TWI.tif')
+TWI <- crop(TWI, SEQ)
+writeRaster(TWI, "./00_Data/Spatial_data/Environmental_data/TWI/SEQ_TWI.tif")
+TWI <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/Outputs/TWI/SEQ_TWI.tif')
+
+twi_tree <- extract(TWI, treedat_v)
+twi_transect <- extract(TWI, transect_v)
+twi_seed <- extract(TWI, germ)
+
+treedat$TWI <- twi_tree$`twi_1s.tif?response-content-disposition=attachment%3B%20filename%3Dtwi_1s`
+transects_fire$TWI <- twi_transect$`twi_1s.tif?response-content-disposition=attachment%3B%20filename%3Dtwi_1s`
+seed_charact_s$TWI <- twi_seed$`twi_1s.tif?response-content-disposition=attachment%3B%20filename%3Dtwi_1s`
 
 
 
@@ -621,3 +611,22 @@ head(dat_cum.prop)
 unique(dat_cum.prop$Fire_freq)
 
 write.csv(dat_cum.prop, './00_Data/Full_experiment/Full_experiment_cumulative_germ.csv')
+
+
+# Calculate fire return intervals for transects ----
+# QPWS vector data
+qpws <- vect('D:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/QPWS_fire_hist_1987.gpkg')
+
+# Extract to points
+qp_t <- extract(qpws, transect_v)
+qp_t
+qp_t <- qp_t[, c(1,3,7,9)]
+
+# ID.y has the information we need for the transect_v dataset
+fire_int <- as.data.frame(transect_v)
+fire_int$id.y <-  1:nrow(fire_int)
+fire_int <- fire_int[, c(10, 1:9)]
+
+fire_int <- left_join(fire_int, qp_t, by = 'id.y') # Difficulty lies with some transects appearing to have really low return intervals but this could actually be only part of the transect burnt at one time
+
+

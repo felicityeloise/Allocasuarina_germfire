@@ -6,7 +6,7 @@
 library(germinationmetrics)
 
 # 1. Heat shock temperature optimisation
-heat <- read.table('./00_Data/Optimisation_tests/heat_tests.txt', header = T)
+heat <- read.table('./00_Data/Seeds_data/Optimisation_tests/heat_tests.txt', header = T)
 head(heat); dim(heat)
 
 
@@ -58,12 +58,15 @@ tor_heat3 <- subset(tor_heat, tor_heat$Temperature == '0' | tor_heat$Temperature
 
 # Create the plots for heat shocks
 
-dev.new(height = 10, width = 18, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(6,4,2,1), mgp = c(3,1,0), mfrow = c(2,3), oma = c(0,0, 3, 8))
+dev.new(height = 20, width = 17, dpi = 80, pointsize = 12, noRStudioGD = T)
+par(mar = c(5,5,4,4), mgp = c(3,1,0), mfrow = c(3,2), oma = c(0,0, 2, 15))
 
-plot(1:ncol(prop.heat_lit), 1:ncol(prop.heat_lit), ylim = c(0,1), type = "n", las = 1, ylab = "Proportion germinated", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.heat_lit), labels = c(2,4,7,9,11,14,16,18,21,23,25,28,30,32,35,37,39), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(main = "80°C", font.main = 1)
+plot(1:ncol(prop.heat_lit), 1:ncol(prop.heat_lit), ylim = c(0,1), type = "n", las = 1, ylab = "", xlab = "", cex.lab = 1.75, xaxt = "n", cex.axis = 1.75)
+axis(side = 1, at = c(0.75, 3, 6, 9, 12, 15, 17), labels = c(2,7,14,21,28,35,39), cex.axis = 1.75)
+axis(side = 1, at = 17, label = 39, cex.axis = 1.75)
+title(main = expression(bold("80°C")), cex.main = 2.5)
+title(xlab = expression(bold("Days")), mgp = c(2.7, 1, 0), cex.lab = 1.75)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.5, line = 3.2)
 for(i in 1:nrow(lit_heat1)){
   dat.thisrun <- lit_heat1[i,6:ncol(lit_heat1)]
   duration.thisrun <- lit_heat1$Duration[i]
@@ -71,10 +74,33 @@ for(i in 1:nrow(lit_heat1)){
   lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
 }
 
+mtext('(a) '~italic(Allocasuarina~littoralis), side = 3, outer = T, font = 2, cex = 1.7, adj = 0, line =-1)
 
-plot(1:ncol(prop.heat_lit), 1:ncol(prop.heat_lit), ylim = c(0,1), type = "n", las = 1, ylab = "", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.heat_lit), labels = c(2,4,7,9,11,14,16,18,21,23,25,28,30,32,35,37,39), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(main = "95°C", font.main = 1)
+
+plot(1:ncol(prop.heat_tor), 1:ncol(prop.heat_tor), ylim = c(0,1), type = "n", las = 1, ylab = "", xaxt = "n", xlab = "", cex.lab = 1.75, cex.axis = 1.75)
+axis(side = 1, at = c(0.75, 3, 6, 9, 12, 15, 17), labels = c(2,7,14,21,28,35,39), cex.axis = 1.75)
+axis(side = 1, at = 17, label = 39, cex.axis = 1.75)
+title(xlab = expression(bold("Days")), mgp = c(2.7, 1, 0), cex.lab = 1.75)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.5, line = 3.2)
+title(main = "80°C", cex.main = 2.5)
+for(i in 1:nrow(tor_heat1)){
+  dat.thisrun <- tor_heat1[i,6:ncol(tor_heat1)]
+  duration.thisrun <- tor_heat1$Duration[i]
+  col.thisrun <- duration.col$col[duration.col$duration == duration.thisrun]
+  lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
+}
+mtext('(b) '~italic(Allocasuarina~torulosa), side = 3, outer = T, font = 2, cex = 1.7, adj = 0.85, line =-1)
+
+
+
+
+
+plot(1:ncol(prop.heat_lit), 1:ncol(prop.heat_lit), ylim = c(0,1), type = "n", las = 1, ylab = "", xlab = "", cex.lab = 1.75, xaxt = "n", cex.axis = 1.75)
+axis(side = 1, at = c(0.75, 3, 6, 9, 12, 15, 17), labels = c(2,7,14,21,28,35,39), cex.axis = 1.75)
+axis(side = 1, at = 17, label = 39, cex.axis = 1.75)
+title(xlab = expression(bold("Days")), mgp = c(2.7, 1, 0), cex.lab = 1.75)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.5, line = 3.2)
+title(main = "95°C", cex.main = 2.5)
 for(i in 1:nrow(lit_heat2)){
   dat.thisrun <- lit_heat2[i,6:ncol(lit_heat2)]
   duration.thisrun <- lit_heat2$Duration[i]
@@ -83,36 +109,13 @@ for(i in 1:nrow(lit_heat2)){
 }
 
 
-plot(1:ncol(prop.heat_lit), 1:ncol(prop.heat_lit), ylim = c(0,1), type = "n", las = 1, ylab = "", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.heat_lit), labels = c(2,4,7,9,11,14,16,18,21,23,25,28,30,32,35,37,39), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(main = "110°C", font.main = 1)
-for(i in 1:nrow(lit_heat3)){
-  dat.thisrun <- lit_heat3[i,6:ncol(lit_heat3)]
-  duration.thisrun <- lit_heat2$Duration[i]
-  col.thisrun <- duration.col$col[duration.col$duration == duration.thisrun]
-  lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
-}
-mtext(expression(bold('(a) ')~bolditalic(Allocasuarina~littoralis)), side = 3, outer = T, font = )
 
-mtext(expression(bold('(b) ')~bolditalic(Allocasuarina~torulosa)), side = 3, line = -24, outer = T, font = 2)
-
-
-plot(1:ncol(prop.heat_tor), 1:ncol(prop.heat_tor), ylim = c(0,1), type = "n", las = 1, ylab = "Proportion germinated", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.heat_tor), labels = c(2,4,7,9,11,14,16,18,21,23,25,28,30,32,35,37,39), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(xlab = "Days", mgp = c(2.2, 1, 0))
-title(main = "80°C", font.main = 1)
-for(i in 1:nrow(tor_heat1)){
-  dat.thisrun <- tor_heat1[i,6:ncol(tor_heat1)]
-  duration.thisrun <- tor_heat1$Duration[i]
-  col.thisrun <- duration.col$col[duration.col$duration == duration.thisrun]
-  lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
-}
-
-
-plot(1:ncol(prop.heat_tor), 1:ncol(prop.heat_tor), ylim = c(0,1), type = "n", las = 1, ylab = '', xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.heat_tor), labels = c(2,4,7,9,11,14,16,18,21,23,25,28,30,32,35,37,39), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(xlab = "Days", mgp = c(2.2, 1, 0))
-title(main = "95°C", font.main = 1)
+plot(1:ncol(prop.heat_tor), 1:ncol(prop.heat_tor), ylim = c(0,1), type = "n", las = 1, ylab = '', xlab = "", cex.lab = 1.75, xaxt = "n", cex.axis = 1.75)
+axis(side = 1, at = c(0.75, 3, 6, 9, 12, 15, 17), labels = c(2,7,14,21,28,35,39), cex.axis = 1.75)
+axis(side = 1, at = 17, label = 39, cex.axis = 1.75)
+title(xlab = expression(bold("Days")), mgp = c(2.7, 1, 0), cex.lab = 1.75)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.5, line = 3.2)
+title(main = "95°C", cex.main = 2.5)
 for(i in 1:nrow(tor_heat2)){
   dat.thisrun <- tor_heat2[i, 6:ncol(tor_heat2)]
   duration.thisrun <- tor_heat2$Duration[i]
@@ -120,10 +123,31 @@ for(i in 1:nrow(tor_heat2)){
   lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
 }
 
-plot(1:ncol(prop.heat_tor), 1:ncol(prop.heat_tor), ylim = c(0,1), type = "n", las = 1, ylab = "", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.heat_tor), labels = c(2,4,7,9,11,14,16,18,21,23,25,28,30,32,35,37,39), cex.axis = 0.8, mgp = c(2.2, 0.7,0))
-title(xlab = "Days", mgp = c(2.2, 1, 0))
-title(main = "110°C", font.main = 1)
+
+
+
+
+plot(1:ncol(prop.heat_lit), 1:ncol(prop.heat_lit), ylim = c(0,1), type = "n", las = 1, ylab = "", xlab = "", cex.lab = 1.75, xaxt = "n", cex.axis = 1.75)
+axis(side = 1, at = c(0.75, 3, 6, 9, 12, 15, 17), labels = c(2,7,14,21,28,35,39), cex.axis = 1.75)
+axis(side = 1, at = 17, label = 39, cex.axis = 1.75)
+title(xlab = expression(bold("Days")), mgp = c(2.7, 1, 0), cex.lab = 1.75)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.5, line = 3.2)
+title(main = "110°C", cex.main = 2.5)
+for(i in 1:nrow(lit_heat3)){
+  dat.thisrun <- lit_heat3[i,6:ncol(lit_heat3)]
+  duration.thisrun <- lit_heat2$Duration[i]
+  col.thisrun <- duration.col$col[duration.col$duration == duration.thisrun]
+  lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
+}
+
+
+
+plot(1:ncol(prop.heat_tor), 1:ncol(prop.heat_tor), ylim = c(0,1), type = "n", las = 1, ylab = "", xlab = "", cex.lab = 1.75, xaxt = "n", cex.axis = 1.75)
+axis(side = 1, at = c(0.75, 3, 6, 9, 12, 15, 17), labels = c(2,7,14,21,28,35,39), cex.axis = 1.75)
+axis(side = 1, at = 17, label = 39, cex.axis = 1.75)
+title(xlab = expression(bold("Days")), mgp = c(2.7, 1, 0), cex.lab = 1.75)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.5, line = 3.2)
+title(main = "110°C", cex.main = 2.5)
 for(i in 1:nrow(tor_heat3)){
   dat.thisrun <- tor_heat3[i, 6:ncol(tor_heat3)]
   duration.thisrun  <- tor_heat3$Duration[i]
@@ -131,8 +155,9 @@ for(i in 1:nrow(tor_heat3)){
   lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
 }
 
+
 par(xpd = NA)
-legend(x = 18, y = 2.5, legend = c('Control', '30 sec', '1 min', '2 min', '5 min', '10 min'), col = duration.col$col, lty = 1, lwd = 4, cex = 0.95, text.width = 0.2, title = 'Exposure duration', bty = "n")
+legend(x = 18, y = 4.1, legend = c('Control', '30 sec', '1 min', '2 min', '5 min', '10 min'), col = duration.col$col, lty = 1, lwd = 4, cex = 2, text.width = 0.2, title = expression(bold('Exposure duration')), bty = "n")
 par(xpd = F)
 
 # Maybe we want to re plot the data as we decide against particular durations to make it easier to see what is going on and make further decisions. Also want to think about delving into this further, looking at Time to 50% germination and those other germination metrics to back up an decisions.
@@ -140,7 +165,7 @@ par(xpd = F)
 
 
 # Look at some summary stats ----
-heat_long <- read.table('./00_Data/Optimisation_tests/heat_long.txt', header = T)
+heat_long <- read.table('./00_Data/Seeds_data/Optimisation_tests/heat_long.txt', header = T)
 head(heat_long);dim(heat_long)
 
 # Split the data for analysing
@@ -1136,7 +1161,7 @@ WeightGermPercent(germ.counts = WPS154_110_10$Count, total.seeds = 20, intervals
 
 
 # 2. Smoke treatments -----
-smoke <- read.table('./00_Data/Optimisation_tests/smoke_tests.txt', header = T)
+smoke <- read.table('./00_Data/Seeds_data/Optimisation_tests/smoke_tests.txt', header = T)
 head(smoke); dim(smoke)
 
 smoke$Time_spread <- smoke$Time_to_finish - smoke$Time_to_germ
@@ -1180,12 +1205,15 @@ smoke.col <- data.frame(col = pal2, dur = c('0','5','10','20','30'))
 
 
 # Create the plots for smoke
-dev.new(height = 12, width = 14, dpi = 80, pointsize = 16, noRStudioGD = T)
-par(mar = c(6,4,2,1), mgp = c(3,1,0), mfrow = c(2,2), oma = c(0,0,3,8))
+dev.new(height = 12, width = 14, dpi = 80, pointsize = 18, noRStudioGD = T)
+par(mar = c(4,4,1,1), mgp = c(3,1,0), mfrow = c(2,2), oma = c(0,0,2,9))
 
-plot(1:ncol(prop.smoke_lit), 1:ncol(prop.smoke_lit), ylim = c(0,1), type = 'n', las = 1, ylab = "Proportion germination", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
+
+plot(1:ncol(prop.smoke_lit), 1:ncol(prop.smoke_lit), ylim = c(0,1), type = 'n', las = 1, ylab = "", xaxt = "n", xlab = "")
+axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 1, mgp = c(2.2, 0.7, 0))
+axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c("", "", "", "11", "", "16", "", "21", "", "25", "", "30", "", "35"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 title(main = "Allocasuarina leaf")
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.2, line = 2.5)
 for(i in 1:nrow(lit_allocas_smoke)){
   dat.thisrun <- lit_allocas_smoke[i, 6:ncol(lit_allocas_smoke)]
   duration.thisrun <- lit_allocas_smoke$Duration[i]
@@ -1194,7 +1222,8 @@ for(i in 1:nrow(lit_allocas_smoke)){
 }
 
 plot(1:ncol(prop.smoke_lit), 1:ncol(prop.smoke_lit), ylim = c(0,1), type = 'n', las = 1, ylab = "", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
+axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 1, mgp = c(2.2, 0.7, 0))
+axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c("", "", "", "11", "", "16", "", "21", "", "25", "", "30", "", "35"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 title(main = "Pine sawdust")
 for(i in 1:nrow(lit_pine_smoke)){
   dat.thisrun <- lit_pine_smoke[i, 6:ncol(lit_pine_smoke)]
@@ -1203,13 +1232,15 @@ for(i in 1:nrow(lit_pine_smoke)){
   lines(1:length(dat.thisrun), dat.thisrun, col = col.thisrun, lwd = 3)
 }
 
-mtext(expression('(a) '~italic(Allocasuarina~littoralis)), side = 3, outer = T, font = 2)
+mtext(expression('(a) '~italic(Allocasuarina~littoralis)), side = 3, outer = T, font = 2, cex = 1.5)
 
-mtext(expression('(b) '~italic(Allocasuarina~torulosa)), side = 3, line = -26, outer = T, font = 2)
+mtext(expression('(b) '~italic(Allocasuarina~torulosa)), side = 3, line = -23, outer = T, font = 2, cex = 1.5)
 
-plot(1:ncol(prop.smoke_tor), 1:ncol(prop.smoke_tor), ylim = c(0,1), type = 'n', las = 1, ylab = "Proportion germination", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.smoke_tor), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(xlab = "Days", mgp = c(2.2, 1, 0))
+plot(1:ncol(prop.smoke_tor), 1:ncol(prop.smoke_tor), ylim = c(0,1), type = 'n', las = 1, ylab = "", xaxt = "n", xlab = "")
+axis(side = 1, at = 1:ncol(prop.smoke_tor), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 1, mgp = c(2.2, 0.7, 0))
+axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c("", "", "", "11", "", "16", "", "21", "", "25", "", "30", "", "35"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
+title(xlab = expression(bold("Days")), mgp = c(2.2, 1, 0), cex.lab = 1.2)
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.2, line = 2.5)
 title(main = "Allocasuarina leaf")
 for(i in 1:nrow(tor_allocas_smoke)){
   dat.thisrun <- tor_allocas_smoke[i, 6:ncol(tor_allocas_smoke)]
@@ -1220,8 +1251,9 @@ for(i in 1:nrow(tor_allocas_smoke)){
 
 
 plot(1:ncol(prop.smoke_tor), 1:ncol(prop.smoke_tor), ylim = c(0,1), type = 'n', las = 1, ylab = "", xaxt = "n", xlab = "")
-axis(side = 1, at = 1:ncol(prop.smoke_tor), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 0.8, mgp = c(2.2, 0.7, 0))
-title(xlab = "Days", mgp = c(2.2, 1, 0))
+axis(side = 1, at = 1:ncol(prop.smoke_tor), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 1, mgp = c(2.2, 0.7, 0))
+axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c("", "", "", "11", "", "16", "", "21", "", "25", "", "30", "", "35"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
+title(xlab = expression(bold("Days")), mgp = c(2.2, 1, 0), cex.lab = 1.2)
 title(main = "Pine sawdust")
 for(i in 1:nrow(tor_pine_smoke)){
   dat.thisrun <- tor_pine_smoke[i, 6:ncol(tor_pine_smoke)]
@@ -1232,7 +1264,7 @@ for(i in 1:nrow(tor_pine_smoke)){
 
 # Legend being produced incorrectly
 par(xpd = NA)
-legend(x = 15, y = 2.5, legend = c("Control", "5 min", '10 min', '20 min', '30 min'), col = smoke.col$col, lwd = 4, cex = 0.95, text.width = 0.2, title = 'Smoke exposure', bty = "n")
+legend(x = 14.5, y = 2.5, legend = c("Control", "5 min", '10 min', '20 min', '30 min'), col = smoke.col$col, lwd = 4, cex = 1.2, text.width = 0.2, title = expression(bold('Smoke exposure')), bty = "n")
 par(xpd = F)
 
 
@@ -1278,7 +1310,7 @@ par(xpd = F)
 
 # Take a look at some summary statistics
 library(germinationmetrics)
-smoke_long <- read.table('./00_Data/Optimisation_tests/smoke_long.txt', header = T)
+smoke_long <- read.table('./00_Data/Seeds_data/Optimisation_tests/smoke_long.txt', header = T)
 head(smoke_long)
 
 # To be able to work with the data we need to subset by seed lot, smoke type and duration
