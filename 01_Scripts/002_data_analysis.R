@@ -1929,6 +1929,8 @@ p2 <- ggplot(data = tran_dat[tran_dat$Species == "torulosa",],
         legend.text = element_text(face = "bold"),
         legend.title = element_text(face = "bold"))
 
+dev.new(width = 12, height = 4, dpi = 300, noRStudioGD = T)
+par(mfrow = c(1,2), mar = c(5,5,3,2))
 
 plot_grid(p1, p2, labels = c("(a)", "(b)"), label_fontface = "plain", label_size = 20, hjust = 0, rel_widths = c(0.8, 1))
 
