@@ -1,4 +1,4 @@
-# Allocasuarina_germfire
+# Influence of fire history on reproductive traits in a congeneric obligate seeder and facultative resprouter tree species
 Analysis of the influence of fire history, heat shock, and smoke on fire-cued germination responses, age class structure and reproductive output in Forest oak (_Allocasuarina torulosa_) and Black she-oak (_Allocasuarina littoralis_).
 
 This project aimed to determine how _Allocasuarina torulosa_ and _Allocasuarina littoralis_ responded to fire related germination cues (e.g., heat shock and smoke) and how fire history influenced age class structure and reproductive output in these species. We also aimed to determine whether fire-cued germination responses were influenced by fire history or post-fire reproductive mode.
