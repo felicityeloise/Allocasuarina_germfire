@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+00_Data/Spatial_data/Environmental_data/BioClim/precipseason.tif
+00_Data/Spatial_data/Environmental_data/BioClim/tempseason.tif
+00_Data/Spatial_data/Environmental_data/TWI/SEQ_TWI.tif
+00_Data/Spatial_data/Environmental_data/TWI/TWI.tif
+02_Workspaces/002_data_analysis.RData
+02_Workspaces/002_data_analysis.RData

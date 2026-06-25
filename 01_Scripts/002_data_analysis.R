@@ -44,8 +44,11 @@ lit_transects <- dat_transects[dat_transects$Species == "littoralis", ]
 dat_tree <- read.csv('./00_Data/Transect_data/Tree_level_enviro.csv', header = T, stringsAsFactors = T)
 head(dat_tree); dim(dat_tree)
 tor_tree <- dat_tree[dat_tree$Species == "torulosa", ]
+#tor_tree[90, 10] <- "sapling" # fix incorrect age category label
+tor_tree$Age <- factor(tor_tree$Age, levels = c('seedling', 'sapling', 'mature'))
 lit_tree <- dat_tree[dat_tree$Species == "littoralis", ]
 # For GB1, this transect was not sampled as comprehensively as other transects as this was the first transect surveyed so much tree level data is missing. It has been limited to 50m, where it was originally measured out to 100m.
+lit_tree$Age <- factor(lit_tree$Age, levels = c('seedling', 'sapling', 'mature'))
 
 # Extract data for investigating cone number
 tor_cones <- tor_tree[which(tor_tree$Cone_presence == "Y"),]
@@ -57,6 +60,97 @@ lit_cones <- lit_cones[!is.na(lit_cones$Cone_number),]
 # Calculate height in cm for cones data
 tor_cones$Height_cm <- tor_cones$Height_.m.*100
 lit_cones$Height_cm <- lit_cones$Height_.m.*100
+
+
+
+
+# Look at what size do these species have cones, plot DBH vs height histograms
+
+plot(tor_cones$Height_.m., tor_cones$Cone_number, pch = 20, xlim = c(2, 17), xaxt = 'n', xlab = "Height (m)", ylab = "Cone number")
+axis(side = 1, at = seq(2,17, 1))
+# All torulosa individuals bearing cones are over 1m tall, so reproductive maturity is reached when they are greater than 1m. Need to look at a dataset that includes all individuals
+
+# If cones are present what is the distribution
+
+dev.new(width = 18, height = 8, dpi = 80, pointsize = 16, noRStudioGD = T)
+par(mfrow = c(1,2), mar = c(4,4,4,2))
+
+plot(lit_cones$Height_.m., lit_cones$Cone_number, pch = 20, col = lit_cones$Age, xlim = c(0,10), las = 1, cex.axis = 1.3, xaxt = 'n', xlab = '', ylab = '', cex = 1.8)
+axis(side = 1, at = seq(0,10,1), cex.axis = 1.3) # One individual which which was tiny with many cones. Only outlier, all others are reproductively mature.
+axis(side = 2, at = seq(0,200,10), labels = F, lwd = 0.3)
+mtext(side = 1, expression(bold("Height (m)")), line = 2.7, cex = 1.75)
+mtext(side = 2, expression(bold("Number of cones")), line = 2.7, cex = 1.75)
+mtext("(a)", cex = 1.75, at = 0, line = 0.2)
+mtext(~italic(Allocasuarina~littoralis), cex = 1.75, at = 10, line = 2)
+
+plot(lit_cones$DBH, lit_cones$Cone_number, pch = 20, col = lit_cones$Age, las = 1, cex.axis = 1.3, xaxt = 'n', xlab = '', ylab = '', cex = 1.8, xlim = c(0,12))
+axis(side = 1, at = seq(0,12,1), cex.axis = 1.3)
+axis(side = 2, at = seq(0, 500, 10), labels = F, lwd = 0.3)
+mtext(side = 1, expression(bold("Diameter at breast height (cm)")), line = 2.7, cex = 1.75)
+mtext(side = 2, expression(bold("Number of cones")), line = 2.7, cex = 1.75)
+mtext("(b)", cex = 1.75, at = 0, line = 0.2)
+
+
+dev.new(width = 18, height = 8, dpi = 80, pointsize = 16, noRStudioGD = T)
+par(mfrow = c(1,2), mar = c(4,4,4,2))
+
+plot(tor_cones$Height_.m., tor_cones$Cone_number, pch = 20, col = tor_cones$Age, cex.axis = 1.3, xaxt = 'n', xlab = '', ylab = '', cex = 1.8, xlim = c(0,18), las = 1)
+axis(side = 1, at = seq(0,18,1), cex.axis = 1.3)
+axis(side = 2, at = seq(0, 500, 10), labels = F, lwd = 0.3)
+mtext(side = 1, expression(bold("Height (m)")), line = 2.7, cex = 1.75)
+mtext(side = 2, expression(bold("Number of cones")), line = 2.7, cex = 1.75)
+mtext("(a)", cex = 1.75, at = 0, line = 0.2)
+mtext(~italic(Allocasuarina~torulosa), cex = 1.75, at = 18, line = 2)
+
+plot(tor_cones$DBH, tor_cones$Cone_number, pch = 20, col = tor_cones$Age, cex.axis = 1.3, xaxt = 'n', xlab = '', ylab = '', cex = 1.8, xlim = c(0, 35), las = 1)
+axis(side = 1, at = seq(0,36,2), cex.axis = 1.3)
+axis(side = 2, at = seq(0, 500, 10), labels = F, lwd = 0.3)
+mtext(side = 1, expression(bold("Diameter at breast height (cm)")), line = 2.7, cex = 1.75)
+mtext(side = 2, expression(bold("Number of cones")), line = 2.7, cex = 1.75)
+mtext("(b)", cex = 1.75, at = 0, line = 0.2)
+
+
+
+
+
+
+dev.new(width = 20, height = 8, dpi = 80, pointsize = 12, noRStudioGD = T)
+par(mfrow = c(1,2), mar = c(4,6,4,2))
+
+
+plot(lit_tree$DBH, lit_tree$Height_.m., pch = 20, xlab = "", ylab = '', xaxt = 'n', yaxt = 'n', xlim = c(0,10), ylim = c(0,16), cex = 1.8)
+# Generally proportional increase in DBH with height.
+axis(side = 1, at = seq(0,10, 2), cex.axis = 1.3)
+axis(side = 2, at = seq(0,16, 2), las = 1, cex.axis = 1.3)
+arrows(x0 = -2, y0 = 1, x1 = 55, y1 = 1, code = 0) # Seedlings
+text(expression(bold("Seedlings")), x = 8, y = 0.5, cex = 1.3)
+arrows(x0 = 3, y0 = 1, x1 = 3, y1 = 17, code = 0)
+text(expression(bold("Saplings")), x = 1, y = 16, cex = 1.3)
+text(expression(bold("Adults")), x = 8, y = 16, cex = 1.3)
+mtext(side = 1, expression(bold("Diameter at breast height (cm)")), line = 2.7, cex = 1.75)
+mtext(side = 2, expression(bold("Height (m)")), line = 2.5, cex = 1.75)
+mtext("(a) "~italic(Allocasuarina~littoralis), cex = 1.75, adj = 0.001)
+
+
+plot(tor_tree$DBH, tor_tree$Height_.m., pch = 20, xlab = '', ylab = ' ', xaxt = 'n', yaxt = 'n', xlim = c(0,49), cex = 1.8)
+# Generally proportional increase in DBH with height.
+axis(side = 1, at = seq(0,48, 2), cex.axis = 1.3)
+axis(side = 2, at = seq(0,16, 2), las = 1, cex.axis = 1.3)
+arrows(x0 = -2, y0 = 1, x1 = 55, y1 = 1, code = 0) # Seedlings
+text(expression(bold("Seedlings")), x = 26, y = 0.5, cex = 1.3)
+arrows(x0 = 3, y0 = 1, x1 = 3, y1 = 17, code = 0)
+text(expression(bold("Saplings")), x = 1, y = 16, cex = 1.3)
+text(expression(bold("Adults")), x = 42, y = 16, cex = 1.3)
+mtext(side = 1, expression(bold("Diameter at breast height (cm)")), line = 2.7, cex = 1.75)
+mtext(side = 2, expression(bold("Height (m)")), line = 2.5, cex = 1.75)
+mtext("(b) "~italic(Allocasuarina~torulosa), cex = 1.75, adj = 0.001)
+
+
+# <1m = seedling, >1m but DBH <3cm = sapling, adult = >1m and DBH >3cm
+
+
+
+
 
 
 # 4. Check for correlations and rescale variables ----
@@ -493,65 +587,70 @@ nt50_m5_th$uci <- nt50_m5_th$fit + (nt50_m5_th$se * 1.96)
 
 
 # Plot predictions for time to 50% germination ----
-dev.new(width = 40, height = 24, dpi = 300, noRStudioGD = T)
-par(mfrow = c(2,3), mar = c(8,5.5,3.5,2))
+dev.new(width = 24, height = 24, dpi = 300, noRStudioGD = T)
+par(mfrow = c(2,2), mar = c(8,5.5,3.5,2))
 
 
-
-# Littoralis
-plot.default(c(1:6), nt50_m1_l$fit, type = 'p', pch = 19, xaxt = "n", xlab = "", ylab = "", las = 1, cex.axis = 2, ylim = c(4,18))
-axis(side = 1, at = c(1:6), labels = c("Control", "80°C", "95°C", "Smoke", "", ""), cex.axis = 2)
-axis(side = 1, at = c(5), labels = "80°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
-axis(side = 1, at = c(6), labels = "95°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
-mtext(side = 1, expression(bold("Treatment")), line = 4.5, cex = 1.8)
-mtext(side = 2, expression(bold("Days to 50% germination")), line = 3, cex = 1.8)
-arrows(c(1:6), nt50_m1_l$lci, c(1:6), nt50_m1_l$uci, length = 0.05, code = 3, angle = 90)
-mtext("(a) "~italic(Allocasuarina~littoralis), cex = 2, adj = 0.001)
-
-
-plot.new()
-plot.new()
 
 # Torulosa
-plot.default(c(1:6), nt50_m1_t$fit, type = 'p', pch = 19, xaxt = "n", xlab = "", ylab = "", las = 1, cex.axis = 2, ylim = c(4,18))
+plot.default(c(1:6), nt50_m1_t$fit, type = 'p', pch = 20, xaxt = "n", xlab = "", ylab = "", las = 1, cex.axis = 2, ylim = c(4,18), cex = 2)
 axis(side = 1, at = c(1:6), labels = c("Control", "80°C", "95°C", "Smoke", "", ""), cex.axis = 2)
 axis(side = 1, at = c(5), labels = "80°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
 axis(side = 1, at = c(6), labels = "95°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
+axis(side = 1, at = c(2), labels = "80°C", cex.axis = 2, tick = F)
+axis(side = 1, at = c(4), labels = "Smoke", cex.axis = 2, tick = F)
 mtext(side = 1, expression(bold("Treatment")), line = 4.5, cex = 1.8)
 mtext(side = 2, expression(bold("Days to 50% germination")), line = 3, cex = 1.8)
 arrows(c(1:6), nt50_m1_t$lci, c(1:6), nt50_m1_t$uci, length = 0.05, code = 3, angle = 90)
-mtext("(b) "~italic(Allocasuarina~torulosa), cex = 2, adj = 0.001)
+mtext("(a) ", cex = 2, adj = 0.001, line = 0.3)
 
 
-plot.default(nt50_m4_ta$Treatment, nt50_m4_ta$fit, pch = 19, type = 'p', xlab  = "", ylab = "", xaxt = "n", las = 1, cex.axis = 2, ylim = c(4, 18), col = "#D94801")
+plot.default(nt50_m4_ta$Treatment, nt50_m4_ta$fit, pch = 20, type = 'p', xlab  = "", ylab = "", xaxt = "n", las = 1, cex.axis = 2, ylim = c(4, 18), col = "#D94801", cex = 2)
 axis(side = 1, at = c(1:6), labels = c("Control", "80°C", "95°C", "Smoke", "", ""), cex.axis = 2)
 axis(side = 1, at = c(5), labels = "80°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
+axis(side = 1, at = c(2), labels = "80°C", cex.axis = 2, tick = F)
+axis(side = 1, at = c(4), labels = "Smoke", cex.axis = 2, tick = F)
 axis(side = 1, at = c(6), labels = "95°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
 mtext(side = 1, expression(bold("Treatment")), line = 4.5, cex = 1.8)
 mtext(side = 2, expression(bold("Days to 50% germination")), line = 3, cex = 1.8)
 arrows(c(1:6), nt50_m4_ta$lci, c(1:6), nt50_m4_ta$uci, length = 0.05, code = 3, angle = 90, col = "#D94801")
-points(c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m4_tl$fit, pch = 19, col = "#FD8D3C")
+points(c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m4_tl$fit, pch = 20, col = "#FD8D3C", cex = 2)
 arrows(c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m4_tl$lci,c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m4_tl$uci, length = 0.05, code = 3, angle = 90, col = "#FD8D3C")
-points(c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m4_th$fit, pch = 19, col = "#7F2704")
+points(c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m4_th$fit, pch = 20, col = "#7F2704", cex = 2)
 arrows(c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m4_th$lci, c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m4_th$uci, length = 0.05, code = 3, angle = 90, col = "#7F2704")
 legend(x = 0.9, y = 18.5, legend = c("2.3 mg", "4.5 mg", "7 mg"), col = c("#FD8D3C", "#D94801", "#7F2704"), title = expression(bold("Seed weight")), lty = 1, pch = 19, cex = 1.8, bty = "n")
-mtext("(c) "~italic(Allocasuarina~torulosa), cex = 2, adj = 0.001)
+mtext("(b) ", cex = 2, adj = 0.001, line = 0.3)
 
 
-plot.default(nt50_m5_ta$Treatment, nt50_m5_ta$fit, pch = 19, type = 'p', xlab  = "", ylab = "", xaxt = "n", las = 1, cex.axis = 2, ylim = c(4, 18), col = 'gray36')
+plot.default(nt50_m5_ta$Treatment, nt50_m5_ta$fit, pch = 20, type = 'p', xlab  = "", ylab = "", xaxt = "n", las = 1, cex.axis = 2, ylim = c(4, 18), col = 'gray36', cex = 2)
 axis(side = 1, at = c(1:6), labels = c("Control", "80°C", "95°C", "Smoke", "", ""), cex.axis = 2)
 axis(side = 1, at = c(5), labels = "80°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
 axis(side = 1, at = c(6), labels = "95°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
+axis(side = 1, at = c(2), labels = "80°C", cex.axis = 2, tick = F)
+axis(side = 1, at = c(4), labels = "Smoke", cex.axis = 2, tick = F)
 mtext(side = 1, expression(bold("Treatment")), line = 4.5, cex = 1.8)
 mtext(side = 2, expression(bold("Days to 50% germination")), line = 3, cex = 1.8)
 arrows(c(1:6), nt50_m5_ta$lci, c(1:6), nt50_m5_ta$uci, length = 0.05, code = 3, angle = 90, col = 'gray36')
-points(c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m5_tl$fit, pch = 19, col = "blue")
+points(c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m5_tl$fit, pch = 20, col = "blue", cex = 2)
 arrows(c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m5_tl$lci,c(0.9, 1.9, 2.9, 3.9, 4.9, 5.9), nt50_m5_tl$uci, length = 0.05, code = 3, angle = 90, col = 'blue')
-points(c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m5_th$fit, pch = 19, col = 'red')
+points(c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m5_th$fit, pch = 20, col = 'red', cex = 2)
 arrows(c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m5_th$lci, c(1.1, 2.1, 3.1, 4.1, 5.1, 6.1), nt50_m5_th$uci, length = 0.05, code = 3, angle = 90, col = 'red')
 legend(x = 0.9, y = 18.5, legend = c("0 fires", "3 fires", "6 fires"), col = c("blue", 'gray36', 'red'), title = expression(bold("Fire frequency")), lty = 1, pch = 19, cex = 1.8, bty = "n")
-mtext("(d) "~italic(Allocasuarina~torulosa), cex = 2, adj = 0.001)
+mtext("(c) ", cex = 2, adj = 0.001, line = 0.3)
 
+
+
+# Littoralis
+plot.default(c(1:6), nt50_m1_l$fit, type = 'p', pch = 20, xaxt = "n", xlab = "", ylab = "", las = 1, cex.axis = 2, ylim = c(4,18), cex = 2)
+axis(side = 1, at = c(1:6), labels = c("Control", "80°C", "95°C", "Smoke", "", ""), cex.axis = 2)
+axis(side = 1, at = c(5), labels = "80°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
+axis(side = 1, at = c(6), labels = "95°C\n &\n smoke", cex.axis = 2, line = 4.5, tick = F)
+axis(side = 1, at = c(2), labels = "80°C", cex.axis = 2, tick = F)
+axis(side = 1, at = c(4), labels = "Smoke", cex.axis = 2, tick = F)
+mtext(side = 1, expression(bold("Treatment")), line = 4.5, cex = 1.8)
+mtext(side = 2, expression(bold("Days to 50% germination")), line = 3, cex = 1.8)
+arrows(c(1:6), nt50_m1_l$lci, c(1:6), nt50_m1_l$uci, length = 0.05, code = 3, angle = 90)
+mtext("(a) "~italic(Allocasuarina~littoralis), cex = 2, adj = 0.001)
 
 
 # Plot effect sizes for t50 ----

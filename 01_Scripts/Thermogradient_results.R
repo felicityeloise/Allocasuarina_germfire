@@ -54,7 +54,7 @@ axis(side = 1, at = 1:ncol(prop.dat_lit), labels = c(2,5,7,9,12,14,20,21,23,26,2
 axis(side = 1, at = 1:ncol(prop.dat_tor), labels = c("","","","","12","","20","","23","","28"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 title(xlab = expression(bold("Days")), mgp = c(2.2, 1, 0), cex.lab = 1.2)
 mtext(side = 2, expression(bold("Proportion germination")), cex = 1.2, line = 2.5)
-mtext('(a) '~italic(Allocasuarina~littoralis))
+mtext('(a) '~italic(Allocasuarina~littoralis), cex = 1.5, adj = 1)
       
 for(i in 1:nrow(cum.prop2_lit)){
   dat.thisrun <- cum.prop2_lit[i,4:ncol(cum.prop2_lit)]
@@ -69,7 +69,7 @@ axis(side = 1, at = 1:ncol(prop.dat_tor), labels = c(2,5,7,9,12,14,20,21,23,26,2
 axis(side = 1, at = 1:ncol(prop.dat_tor), labels = c("","","","","12","","20","","23","","28"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 title(xlab = expression(bold("Days")), mgp = c(2.2, 1, 0), cex.lab = 1.2)
 mtext(side = 2, expression(bold("Proportion germination")), cex = 1.2, line = 2.5)
-mtext("(b) "~italic(Allocasuarina~torulosa))
+mtext("(b) "~italic(Allocasuarina~torulosa), cex = 1.5, adj = 1)
 for(i in 1:nrow(cum.prop2_tor)){
   dat.thisrun <- cum.prop2_tor[i,4:ncol(cum.prop2_tor)]
   chamber.thisrun <- cum.prop2_tor$Chamber[i]

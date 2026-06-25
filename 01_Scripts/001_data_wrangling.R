@@ -132,15 +132,15 @@ seed_charact_s$seed_wt_mg <- seed_charact_s$seed_weight*1000
 
 # 5.1 Load fire data ----
 # We need to make decisions about what fire data to use, whether we need to keep QPWS data where it is available and whether to use the GLM or GAM predictions. We did conclude that the GAM predictions were better for investigations of fire frequency but lets just confirm this.
-pts <- vect('D:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/QPWS_random.gpkg')
-GLM_pred <- rast('D:/PhD/R_analysis/Fire_freq/04_Results/Prediction_rasters/GLM_pred.tif')
-GAM_pred <- rast('D:/PhD/R_analysis/Fire_freq/04_Results/Prediction_rasters/GAM_pred.tif')
-QPWS <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/SEQ/QPWS_SEQ_freq_raster.tif')
+pts <- vect('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/QPWS_random.gpkg')
+GLM_pred <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/04_Results/Prediction_rasters/GLM_pred.tif')
+GAM_pred <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/04_Results/Prediction_rasters/GAM_pred.tif')
+QPWS <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/SEQ/QPWS_SEQ_freq_raster.tif')
 
 
 
 # 5.2 Extract fire frequencies to points for seed lots and transects  ----
-transects <- read.csv('C:/Users/s4590925/OneDrive - The University of Queensland/Desktop/GitHub/Allocasuarina_germfire/00_Data/Transect_data/Transect_level.csv', stringsAsFactors = T, header = T)
+transects <- read.csv('./00_Data/Transect_data/Transect_level.csv', stringsAsFactors = T, header = T)
 head(transects)
 # Note for transects - we measured Gatton transect GB1 first, with fewer measurements taken from each individual and going out to 100m. As all other transects were reduced, we have limited data for this transect to 50m.
 
@@ -297,7 +297,7 @@ axis(side = 1, at = seq(-1,7,1))
 
 
 # 5.5 Extract QPWS fire history for transects and seed lots ----
-QPWS_hist_rast <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/SEQ/QPWS_TSF.tif')
+QPWS_hist_rast <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Outputs/SEQ/QPWS_TSF.tif')
 transect_TSF <- extract(QPWS_hist_rast, transect_v, xy = T)
 germ_TSF <- extract(QPWS_hist_rast, germ, xy = T)
 
@@ -305,7 +305,7 @@ germ_TSF <- extract(QPWS_hist_rast, germ, xy = T)
 t_TSF_na <-  transect_TSF[is.na(transect_TSF$QPWS_TSF),]
 g_TSF_na <- germ_TSF[is.na(germ_TSF$QPWS_TSF), ]
 
-sent <- rast('D:/ADATA/Fire_data/QLD/Landsat_Annual_Fire_Scars/TERN_Sentinel2/cvmsre_qld_2023_afma2(1).tif')
+sent <- rast('/Volumes/Extreme SSD/ADATA/Fire_data/QLD/Landsat_Annual_Fire_Scars/TERN_Sentinel2/cvmsre_qld_2023_afma2(1).tif')
 t_TSF2 <- extract(sent, transect_v)
 t_TSF2
 
@@ -386,7 +386,8 @@ unique(treedat_v$Fire_freq)
 tree_burn <- extract(QPWS_hist_rast, treedat_v)
 is.na(tree_burn)
 
-sent <- rast('D:/ADATA/Fire_data/QLD/Landsat_Annual_Fire_Scars/QLD_spatial_Landsat/1987/IMG_QLD_LANDSAT_FIRESCARS_1987.tif')
+sent <- rast('/Volumes/Extreme SSD/ADATA/Fire_data/QLD/Landsat_Annual_Fire_Scars/QLD_spatial_Landsat/1987/IMG_QLD_LANDSAT_FIRESCARS_1987.tif')
+
 tree_burn2 <- extract(sent, treedat_v) 
   colnames(tree_burn2) <- c("ID", "sent")
 
@@ -422,7 +423,7 @@ e <- ext(1936841, 2086019, -3241253, -3105183)
 
 # 10.1 Foliage projective cover ----
 # We want information relating to foliage projective cover and precipitation.
-FPC14 <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_FPC2014.tif')
+FPC14 <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_FPC2014.tif')
 unique(FPC14$DP_QLD_FPC2014)
 # Need to do some more adjustments to this data - metadata states that data ranges between 100-200 which is equivalent to 0-100% FPC. values erroneously predicted above 100% or below 0% have been classed as above 200 and below 100 respectively. Zero values indicate NULL data. The data actually seems to be ranging between 88-213. Post 2014, values range between 0-100 which would denote the % cover without any further changes being required. Let's take a look at the data in ArcGIS as well to make sure this is true for the 2014 dataset.
 
@@ -459,7 +460,7 @@ writeRaster(FPC14seq, './00_Data/Spatial_data/Environmental_data/FPC/FPC14seq.ti
 
 # 1.3.1 Add in the data from more recent years post 2014 ----
 # Firstly, look at the new data to see what needs to be changed
-FPC18 <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_S2_WOODY_FPC_2018.tif')
+FPC18 <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_S2_WOODY_FPC_2018.tif')
 
 # Need to aggregate the data to a coarser resolution, from 10m to 30m, and then we also need to crop the data to SEQ
 FPC18_seq <- crop(FPC18, e)
@@ -471,7 +472,7 @@ plot(FPC18seq)
 writeRaster(FPC18seq, './00_Data/Spatial_data/Environmental_data/FPC/FPC18_SEQ.tif')
 
 
-FPC19 <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_S2_WOODY_FPC_2019.tif')
+FPC19 <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_S2_WOODY_FPC_2019.tif')
 FPC19_seq <- crop(FPC19, e)
 FPC19seq <- terra::aggregate(FPC19_seq, fact = 3)
 FPC19seq
@@ -487,7 +488,7 @@ plot(FPC20seq)
 writeRaster(FPC20seq, './00_Data/Spatial_data/Environmental_data/FPC/FPC20_SEQ.tif')
 
 
-FPC21 <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_S2_FPC_2021.tif') # The coordinate reference system has not been read in the same manner as the others so we will need to fix this
+FPC21 <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/FPC/DP_QLD_S2_FPC_2021.tif') # The coordinate reference system has not been read in the same manner as the others so we will need to fix this
 
 FPC21_seq <- crop(FPC21, e)
 FPC21seq <- project(FPC21_seq, 'EPSG:3577')
@@ -576,7 +577,7 @@ head(transect_v)
 head(seed_charact_s)
 
 # Topographic wetness index
-TWI <- rast("/vsicurl/https://s3.data.csiro.au/dapprd/000005588v002/data/TopographicWetnessIndex_1_arcsecond_resolution/mosaic/twi_1s.tif?response-content-disposition=attachment%3B%20filename%3D%22twi_1s.tif%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250407T033851Z&X-Amz-SignedHeaders=host&X-Amz-Expires=172800&X-Amz-Credential=LZXJN5QGAFIUYRYFTEAP%2F20250407%2FCDC%2Fs3%2Faws4_request&X-Amz-Signature=eacd8e68095b25b851763865fc9dd4792d6f4074293b2e42623165cc50ae9309") # To get this link need to click download on the file from https://data.csiro.au/collection/csiro:5588 and then as it is downloading open up the downloads drop down > right click on the file > copy download link. Need to get a new link each time this line is run otherwise it will not work.
+TWI <- rast("/vsicurl/https://s3.data.csiro.au/dapprd/000005588v002/data/TopographicWetnessIndex_1_arcsecond_resolution/mosaic/twi_1s.tif?response-content-disposition=attachment%3B%20filename%3D%22twi_1s.tif%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260317T003033Z&X-Amz-SignedHeaders=host&X-Amz-Expires=172800&X-Amz-Credential=33ZOGT29F1GVDTQ8BUQU%2F20260317%2FCDC%2Fs3%2Faws4_request&X-Amz-Signature=3c3ef491ada4425c3ee03b78a7df1dcfb0402e00c032fe7845f1e10e0a139f8f") # To get this link need to click download on the file from https://data.csiro.au/collection/csiro:5588 and then as it is downloading open up the downloads drop down > right click on the file > copy download link. Need to get a new link each time this line is run otherwise it will not work.
 
 writeRaster(TWI, "./00_Data/Spatial_data/Environmental_data/TWI/TWI.tif")
 
@@ -588,7 +589,7 @@ gdalwarp(srcfile = './00_Data/Spatial_data/Environmental_data/TWI/TWI.tif', # So
 TWI <- rast('./00_Data/Spatial_data/Environmental_data/TWI/TWI.tif')
 TWI <- crop(TWI, SEQ)
 writeRaster(TWI, "./00_Data/Spatial_data/Environmental_data/TWI/SEQ_TWI.tif")
-TWI <- rast('D:/PhD/R_analysis/Fire_freq/00_Data/Environmental_data/Outputs/TWI/SEQ_TWI.tif')
+TWI <- rast('./00_Data/Spatial_data/Environmental_data/TWI/SEQ_TWI.tif')
 
 twi_tree <- extract(TWI, treedat_v)
 twi_transect <- extract(TWI, transect_v)
