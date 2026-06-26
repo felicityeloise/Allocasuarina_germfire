@@ -34,24 +34,28 @@ cor.test(viable$X.ray_proportion_viable[viable$Species == "torulosa"], viable$TT
 
 
 dev.new(height = 10, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(5,5,2,5), mgp = c(3,1,0), mfrow = c(1, 2), oma = c(0,0,0,6), cex.axis = 2.1, cex.lab = 2.3, cex.main = 2)
+par(mar = c(5,6,3,5), mgp = c(3,1.3,0), mfrow = c(1, 2), oma = c(0,0,0,6), cex.axis = 2.1, cex.lab = 2.3, cex.main = 2)
 
-plot(viable$X.ray_proportion_viable[viable$Species == "littoralis"], viable$TTC_proportion_viable[viable$Species == "littoralis"], pch = NA, xlab = expression(bold("X-ray")), ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
+plot(viable$X.ray_proportion_viable[viable$Species == "littoralis"], viable$TTC_proportion_viable[viable$Species == "littoralis"], pch = NA, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
 points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 2)
 points(viable$X.ray_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "littoralis" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
 text(0.03, 1, labels = "Pearson's r = 0.71", adj = 0, cex = 2)
 text(0.16, 0.9, labels = "p < 0.001", cex = 2)
 mtext("(a) "~italic(Allocasuarina~littoralis), cex = 2.3, adj = 0)
-mtext(side = 2, expression(bold("Tetrazolium")), cex = 2.3, line = 3.4)
+mtext(side = 2, expression(bold("Tetrazolium")), cex = 2.3, line = 4.2)
+mtext(side = 1, expression(bold("X-ray")), cex = 2.3, line = 4)
 
-plot(viable$X.ray_proportion_viable[viable$Species == "torulosa"], viable$TTC_proportion_viable[viable$Species == "torulosa"], pch = NA, xlab = expression(bold("X-ray")), ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
+
+plot(viable$X.ray_proportion_viable[viable$Species == "torulosa"], viable$TTC_proportion_viable[viable$Species == "torulosa"], pch = NA, xlab = "", ylab = "", xlim = c(0,1), ylim = c(0,1), las = 1)
 points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Replicate == 1], viable$TTC_proportion_viable[viable$Species == "torulosa" &viable$Replicate == 1], col = "#D73027", pch = 20, cex = 2)
 points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Replicate == 2], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Replicate == 2], col = "#FDAE61", pch = 20, cex = 2)
 points(viable$X.ray_proportion_viable[viable$Species == "torulosa" & viable$Replicate == 3], viable$TTC_proportion_viable[viable$Species == "torulosa" & viable$Replicate == 3], col = "#4575B4", pch = 20, cex = 2)
 text(0.03, 1, labels = "Pearson's r = 0.74", adj = 0, cex = 2)
 text(0.16, 0.9, labels = "p < 0.001", cex = 2)
 mtext("(b) "~italic(Allocasuarina~torulosa), cex = 2.3, adj = 0)
+mtext(side = 2, expression(bold("Tetrazolium")), cex = 2.3, line = 4.2)
+mtext(side = 1, expression(bold("X-ray")), cex = 2.3, line = 4)
 
 
 
@@ -141,9 +145,9 @@ cor.test(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_
 
 
 dev.new(height = 10, width = 25, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(5,5,2,5), mgp = c(3,1,0), mfrow = c(1, 2), oma = c(0,0,0,6), cex.axis = 2.1, cex.lab = 2.3, cex.main = 2)
+par(mar = c(5,6,3,5), mgp = c(3,1.3,0), mfrow = c(1, 2), oma = c(0,0,0,6), cex.axis = 2.1, cex.lab = 2.3, cex.main = 2)
 
-plot(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis"], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = expression(bold("X-ray")), ylab = "", las = 1)
+plot(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis"], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = "", ylab = "", las = 1)
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 3)
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#F46D43", pch = 20, cex = 3)
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#A50026", pch = 20, cex = 3)
@@ -152,14 +156,15 @@ points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_in
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "H95+S"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == "Allocasuarina littoralis" & Treatment_viability_averages_ind$Treatment == "C"], col = "#313695", pch = 20, cex = 3)
 text(0.4, 0.4, labels = "Pearson's r = 0.85", adj = 0, cex = 2)
 text(0.4, 0.3, labels = "p < 0.001", adj = 0, cex = 2)
-mtext(side = 2, expression(bold("Tetrazolium")), cex = 2.3, line = 3.4)
+mtext(side = 2, expression(bold("Tetrazolium")), cex = 2.3, line = 4.2)
+mtext(side = 1, expression(bold("X-ray")), cex = 2.3, line = 4)
 mtext("(a) "~italic(Allocasuarina~littoralis), cex = 2.3, adj = 0)
 
 
 
 
 
-plot(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' ], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' ], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = expression(bold("X-ray")), ylab = "", las = 1)
+plot(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' ], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa' ], pch = NA, xlim = c(0,1), ylim = c(0,1), xlab = "", ylab = "", las = 1)
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa'  & Treatment_viability_averages_ind$Treatment == "C"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa'  & Treatment_viability_averages_ind$Treatment == "C"], col = "#FEE090", pch = 20, cex = 3)
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa'  & Treatment_viability_averages_ind$Treatment == "H80"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa'  & Treatment_viability_averages_ind$Treatment == "H80"], col = "#F46D43", pch = 20, cex = 3)
 points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa'  & Treatment_viability_averages_ind$Treatment == "H95"], Treatment_viability_averages_ind$X_ray_via[Treatment_viability_averages_ind$Species == 'Allocasuarina torulosa'  & Treatment_viability_averages_ind$Treatment == "H95"], col = "#A50026", pch = 20, cex = 3)
@@ -169,7 +174,8 @@ points(Treatment_viability_averages_ind$mean_TTC[Treatment_viability_averages_in
 text(0.4, 0.4, labels = "Pearson's r = 0.79", adj = 0, cex = 2)
 text(0.4, 0.3, labels = "p < 0.001", adj = 0, cex = 2)
 mtext("(b) "~italic(Allocasuarina~torulosa), cex = 2.3, adj = 0)
-
+mtext(side = 2, expression(bold("Tetrazolium")), cex = 2.3, line = 4.2)
+mtext(side = 1, expression(bold("X-ray")), cex = 2.3, line = 4)
 
 
 

@@ -1206,7 +1206,7 @@ smoke.col <- data.frame(col = pal2, dur = c('0','5','10','20','30'))
 
 # Create the plots for smoke
 dev.new(height = 12, width = 14, dpi = 80, pointsize = 18, noRStudioGD = T)
-par(mar = c(4,4,1,1), mgp = c(3,1,0), mfrow = c(2,2), oma = c(0,0,2,9))
+par(mar = c(4,4,1,1), mgp = c(3,1,0), mfrow = c(2,2), oma = c(0,0,2,11))
 
 
 plot(1:ncol(prop.smoke_lit), 1:ncol(prop.smoke_lit), ylim = c(0,1), type = 'n', las = 1, ylab = "", xaxt = "n", xlab = "")
@@ -1225,6 +1225,7 @@ plot(1:ncol(prop.smoke_lit), 1:ncol(prop.smoke_lit), ylim = c(0,1), type = 'n', 
 axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c(2,4,9,11,14,16,18,21,23,25,28,30,32,35), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c("", "", "", "11", "", "16", "", "21", "", "25", "", "30", "", "35"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 title(main = "Pine sawdust")
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.2, line = 2.5)
 for(i in 1:nrow(lit_pine_smoke)){
   dat.thisrun <- lit_pine_smoke[i, 6:ncol(lit_pine_smoke)]
   duration.thisrun <- lit_pine_smoke$Duration[i]
@@ -1255,6 +1256,7 @@ axis(side = 1, at = 1:ncol(prop.smoke_tor), labels = c(2,4,9,11,14,16,18,21,23,2
 axis(side = 1, at = 1:ncol(prop.smoke_lit), labels = c("", "", "", "11", "", "16", "", "21", "", "25", "", "30", "", "35"), cex.axis = 1, mgp = c(2.2, 0.7, 0))
 title(xlab = expression(bold("Days")), mgp = c(2.2, 1, 0), cex.lab = 1.2)
 title(main = "Pine sawdust")
+mtext(side = 2, expression(bold("Proportion germinated")), cex = 1.2, line = 2.5)
 for(i in 1:nrow(tor_pine_smoke)){
   dat.thisrun <- tor_pine_smoke[i, 6:ncol(tor_pine_smoke)]
   duration.thisrun <- tor_pine_smoke$Duration[i]

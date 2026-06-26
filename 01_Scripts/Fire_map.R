@@ -103,8 +103,7 @@ p1 <-
 ggplot() + 
   geom_spatvector(data = coast, col = "black", fill = 'transparent')+
   geom_spatraster(data = QPWS_fire) +
-  scale_fill_continuous(na.value = "transparent", limits = c(0,7), breaks = c(0,5,7), low = "#FFF5F0", high = "darkred", name = expression(bold("Fire frequency")), 
-                        guide = guide_colorbar(direction = "horizontal", title.position = "top", title.hjust = 0.5, barwidth = unit(6, "cm"), barheight = unit(0.5, "cm"), position = "bottom"))+
+  scale_fill_continuous(na.value = "transparent", limits = c(0,7), breaks = c(0,5,7), low = "#FFF5F0", high = "darkred", name = expression(bold("Fire frequency")))+
   geom_spatraster(data = mod_satellite_fire) +
   ggnewscale::new_scale_fill() +
   theme_cowplot(font_size = 26) +
@@ -120,10 +119,10 @@ ggplot() +
   geom_spatvector(data = HV, fill = NA, color = 'black')+
   geom_spatvector(data = Bartopia, fill = NA, color = 'black')+
   geom_spatvector(data = Bulimbah, fill = NA, color = 'black')+
-  geom_spatvector(data = sdat_r, aes(fill = Species, shape = Species), size = 4, color = 'black') +
+  geom_spatvector(data = sdat_r, aes(fill = Species, shape = Species), size = 4) +
   scale_shape_manual(values = c(21, 23), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))), name = expression(bold("Species"))) +
-  scale_fill_manual(values = c("#483D8B", "steelblue4"), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))), name = expression(bold("Species"))) +
-  guides(fill = guide_legend(override.aes = list(shape = c(21, 23), size = 6, color = "black", alpha = 1))) +
+  scale_fill_manual(values = c("#7B68EE", "#1E90FF"), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))), name = expression(bold("Species"))) +
+  guides(fill = guide_legend(override.aes = list(shape = c(21, 23), size = 6, alpha = 1))) +
   theme(legend.text = element_text(size = rel(1.2)),
         legend.key.height = unit(0.8, "cm"),
         legend.title = element_text(size = rel(1)),
@@ -149,7 +148,6 @@ sample_plot <- ggdraw()+
   draw_plot(inset, x = 0.55, y = 0.7, width = 0.4, height = 0.3) 
 sample_plot
 ggsave("./03_Results/Sample_map.pdf", sample_plot, width = 19, height = 10)
-ggsave('./03_Results/Sample_map.png', sample_plot, width = 19, height = 10)
 
 
 
