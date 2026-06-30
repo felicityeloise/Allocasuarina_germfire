@@ -139,6 +139,7 @@ QPWS <- rast('/Volumes/Extreme SSD/PhD/R_analysis/Fire_freq/00_Data/Fire_data/Ou
 
 
 
+
 # 5.2 Extract fire frequencies to points for seed lots and transects  ----
 transects <- read.csv('./00_Data/Transect_data/Transect_level.csv', stringsAsFactors = T, header = T)
 head(transects)

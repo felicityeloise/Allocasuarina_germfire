@@ -7,12 +7,12 @@
 
 
 # Read in the data
-torulosa <- read.csv("./00_Data/Full_experiment/Treatment_grouping/Torulosa.csv", header = T)
+torulosa <- read.csv("./00_Data/Seeds_data/Full_experiment/Treatment_grouping/Torulosa.csv", header = T)
 head(torulosa)
 str(torulosa)
 unique(torulosa$Fire_freq_category)
 
-littoralis <- read.csv("./00_Data/Full_experiment/Treatment_grouping/Littoralis.csv", header = T)
+littoralis <- read.csv("00_Data/Seeds_data/Full_experiment/Treatment_grouping/Littoralis.csv", header = T)
 head(littoralis)
 
 torulosa_lowfi <- subset(torulosa, Fire_freq_category == "low")
