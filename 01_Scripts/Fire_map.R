@@ -124,10 +124,10 @@ ggplot() +
   scale_fill_manual(values = c("#7B68EE", "#1E90FF"), labels = c(expression(italic("Allocasuarina littoralis")), expression(italic("Allocasuarina torulosa"))), name = expression(bold("Species"))) +
   guides(fill = guide_legend(override.aes = list(shape = c(21, 23), size = 6, alpha = 1))) +
   theme(legend.text = element_text(size = rel(1.2)),
-        legend.key.height = unit(0.8, "cm"),
+        legend.key.height = unit(1.5, "cm"),
         legend.title = element_text(size = rel(1)),
         legend.position = "right",
-        legend.justification = "center")
+        legend.justification = "bottom")
 
 
 # 8. Create the inset map
@@ -140,7 +140,7 @@ inset <-
   theme_void() +
   theme(legend.position = "none") +
   geom_rect(aes(xmin = e[1], xmax = e[2], ymin = e[3], ymax = e[4]), alpha = 0, colour = "black", linewidth = 1.5)+
-  annotation_scale(location = "bl", text_cex = 1.3, pad_y = unit(0.05, "cm"), pad_x = unit(5, 'cm'))
+  annotation_scale(location = "bl", text_cex = 1.3, pad_y = unit(0.1, "cm"), pad_x = unit(4, 'cm'))
 
 
 sample_plot <- ggdraw()+
